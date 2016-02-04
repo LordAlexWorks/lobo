@@ -154,6 +154,7 @@ body {
 }
 .slides-container > .slide.slide-two {
   background: url('../imgs/bg.jpg');
-  background-size: 100%;
+  background-size: cover;
+  background-position: top center;
 }
 /*# sourceMappingURL=main.css.map */
