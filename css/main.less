@@ -36,6 +36,10 @@ html, body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.hide {
+    display: none;
+}
+
 .slides-container {
     height: 100%;
 
@@ -72,7 +76,9 @@ html, body {
             }
         }
 
-        &.slide-one {
+        &.slide-one 
+        
+        {
             background: @primary-one;
             color: white;
 
@@ -153,6 +159,11 @@ html, body {
                     font-size: 18px;
                 }
             }
+        }
+
+        &.slide-two {
+            background: url('../imgs/bg.jpg');
+            background-size: 100%;
         }
     }
 }
