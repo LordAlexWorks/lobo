@@ -176,6 +176,7 @@ body {
 .slides-container > .slide.slide-two .bo .img > img,
 .slides-container > .slide.slide-two .lo .img > img {
   width: 100%;
+  position: relative;
 }
 .slides-container > .slide.slide-two .bo .text,
 .slides-container > .slide.slide-two .lo .text {
@@ -275,7 +276,7 @@ body {
   cursor: pointer;
   width: 32px;
   height: 32px;
-  line-height: 32px;
+  line-height: 30px;
   text-align: center;
   border: 2px solid #fff;
   border-radius: 32px;
