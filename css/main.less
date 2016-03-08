@@ -416,5 +416,80 @@ html, body {
                 }
             }
         }
+
+        &.slide-four {
+            background: @primary-one;
+            position: relative;
+
+            .content-container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 50px 15px;
+
+                .content {
+                    @media(min-width: 720px) {
+                        position: absolute;
+                        top: 50%;
+                        .transform(translateY(-50%));
+                    }
+                }
+                
+                .text {
+                    color: #fff;
+                    font-size: 50px;
+                    text-align: center;
+
+                    padding-top: 30px;  
+                    
+                    @media(min-width: 720px) {
+                        padding-top: 0;
+                        padding-left: 50px;
+                        display: inline-block;
+
+                        vertical-align: top;
+                        line-height: 120px;
+                    }
+
+                    @media(min-width: 1024px) {
+                        padding-left: 120px;
+                    }
+                }                
+
+                .fruits {
+                    text-align: center;
+
+                    @media(min-width: 720px) {
+                        display: inline-block;
+                        width: 235px;
+                    }
+
+                    @media(min-width: 1024px) {
+                        width: 255px;
+                    }
+                }
+
+                .fruit {
+                    display: inline-block;
+                    height: 110px;                  
+                }
+
+                .fruit-1 {
+                    margin-right: 50px;
+
+                    @media(min-width: 1024px) {
+                        margin-right: 70px;
+                    }
+                }
+
+                .fruit-2 {
+                    position: relative;
+                    
+                    > img {
+                        position: relative;
+                        top: 8px;
+                    }
+                }
+            }
+        }
     }
 }
