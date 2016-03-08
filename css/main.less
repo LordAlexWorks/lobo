@@ -49,52 +49,78 @@ html, body {
     clear: both;
 }
 
+.right-arrow, .left-arrow {
+    position: absolute;
+    top: 50%;
+    .transform(translateY(-50%));
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 44px;
+    font-size: 34px;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 100;
+}
+
+.left-arrow {   
+    left: 50px;
+
+    @media(max-width: 999px) {
+        left: 32px;
+    }
+
+    @media(max-width: 767px) {
+        left: 16px;
+    }
+
+    > i {
+        position: relative;
+        top: -2px;
+    }
+}
+
+.right-arrow {    
+    right: 50px;
+
+    @media(max-width: 999px) {
+        right: 32px;
+    }
+
+    @media(max-width: 767px) {
+        right: 16px;
+    }
+
+    > i {
+        position: relative;
+        left: 2px;
+        top: -2px;
+    }
+}
+
 .slides-container {
     height: 100%;
 
     > .slide {
         width: 100%;
-        min-height: 100%;
-
-        .right-arrow {
-            position: absolute;
-            top: 50%;
-            right: 50px;
-            .transform(translateY(-50%));
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 44px;
-            font-size: 34px;
-            text-align: center;
-            border: 2px solid white;
-            border-radius: 30px;
-            cursor: pointer;
-
-            @media(max-width: 999px) {
-                right: 32px;
-            }
-
-            @media(max-width: 767px) {
-                right: 16px;
-            }
-
-            > i {
-                position: relative;
-                left: 2px;
-            }
-        }
+        min-height: 100%;        
 
         &.slide-one {
             background: @primary-one;
             color: white;
 
-            .slide-content {
+            .content-container {
                 max-width: 830px;
                 margin: 0 auto;
-                position: relative;
-                top: 50%;
-                .transform(translateY(-50%));
+
+                .content {
+                    position: absolute;
+                    top: 50%;
+                    .transform(translateY(-50%));
+                }
 
                 @media(max-width: 999px) {
                     max-width: 640px;
@@ -357,7 +383,7 @@ html, body {
                         margin-bottom: 0;
                     }
 
-                    @media(min-width: 720px){
+                    @media(min-width: 720px) {
                         max-width: 600px;
                         margin-bottom: 32px;
                         padding-bottom: 32px;
@@ -405,7 +431,7 @@ html, body {
                         font-size: 16px;
                         color: @text-accent;
 
-                        @media(min-width: 720px){
+                        @media(min-width: 720px) {
                             font-size: 18px;
                         }
 

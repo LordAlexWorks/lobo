@@ -29,9 +29,6 @@
         loDesc.hide();
     });
 
-
-    
-
     var Animation = function(element, options) {
         var self = this;
 
@@ -82,7 +79,7 @@
     var loAnim = new Animation(loCat, {
         top: {
             low: -30,
-            high: 30,
+            high: 10,
             delta: -1
         },
         left: {
@@ -92,4 +89,49 @@
         },
         time: 50
     });
+
+    /* SLIDES */
+    var slides = $('.slide');
+    var activeSlide;
+
+    var initSlider = function() {
+        activeSlide = 0;
+        $('.left-arrow').hide();
+
+        activateSlide();
+    };
+
+    var activateSlide = function() {
+        for (var i = 0; i < slides.length; i++) {
+            if (activeSlide === i) $(slides[i]).show();
+            else $(slides[i]).hide();
+        }
+    };
+
+    var checkArrows = function() {
+        if (activeSlide === slides.length - 1) $('.right-arrow').hide();
+        else $('.right-arrow').show();
+
+        if (activeSlide > 0) $('.left-arrow').show();
+        else $('.left-arrow').hide();
+    };
+
+    var nextSlide = function () {
+        activeSlide++;
+
+        checkArrows();
+        activateSlide();
+    };
+
+    var prevSlide = function () {
+        activeSlide--;
+
+        checkArrows();
+        activateSlide();
+    };
+
+    $('.right-arrow').on('click', nextSlide);
+    $('.left-arrow').on('click', prevSlide);
+
+    initSlider();
 });
