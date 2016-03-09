@@ -228,4 +228,34 @@
     }
 
     setInterval(updateGradient, 10);
+
+    /* TYPEWRITER */
+    var str = '<div class="title">'
+        + '    <span class="marked underline we">We</span> make stuff'
+        + '</div>'
+        + ''
+        + '<div class="title">'
+        + '    for <span class="marked underline them">them</span>, <a href="mailto:info@lobo.io" class="marked you">y<span class="underline">ou</span></a> and <span class="marked underline us">us</span>.'
+        + '</div>'
+        + ''
+        + '<div class="text">'
+        + '    Lobo are a hard-working multi-disiplinary angency deliviring high quality projects.'
+        + '</div>',
+        textCounter = 0,
+        isTag,
+        text;
+
+    (function type() {
+        text = str.slice(0, ++textCounter);
+        if (text === str) return;
+
+        $('.slide-one .content').html(text);
+
+        var char = text.slice(-1);
+        if (char === '<') isTag = true;
+        if (char === '>') isTag = false;
+
+        if (isTag || char === ' ') return type();
+        setTimeout(type, 100);
+    }());
 });
