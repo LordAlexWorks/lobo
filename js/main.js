@@ -41,10 +41,7 @@
             var pct = ((100 - val) / 100) * c * -1;
 
             $circle.css({ strokeDashoffset: pct });
-
             
-            console.log(val);
-
             val++;
             if (val < 100) setTimeout(draw, 10);
             else {
@@ -54,7 +51,6 @@
 
         draw();
     };
-
 
     var catsFadeIn = function (index) {
         if (cats.length === index) {
@@ -211,26 +207,30 @@
 
     initSlider();
 
-    $('.marked.we').on('click', function() {
-        activeSlide = weSlideIndex;
+    var markedHandlers = function () {
+        $('.marked.we').on('click', function () {
+            console.log(1);
 
-        checkArrows();
-        activateSlide();
-    });
+            activeSlide = weSlideIndex;
 
-    $('.marked.them').on('click', function() {
-        activeSlide = themSlideIndex;
+            checkArrows();
+            activateSlide();
+        });
 
-        checkArrows();
-        activateSlide();
-    });
+        $('.marked.them').on('click', function() {
+            activeSlide = themSlideIndex;
 
-    $('.marked.us').on('click', function () {
-        activeSlide = usSlideIndex;
+            checkArrows();
+            activateSlide();
+        });
 
-        checkArrows();
-        activateSlide();
-    });
+        $('.marked.us').on('click', function() {
+            activeSlide = usSlideIndex;
+
+            checkArrows();
+            activateSlide();
+        });
+    };
 
     /* GRADIENT */
     var colors = new Array(
@@ -307,7 +307,9 @@
         if (char === '<') isTag = true;
         if (char === '>') isTag = false;
 
+        markedHandlers();
+
         if (isTag || char === ' ') return type();
-        setTimeout(type, 100);
+        setTimeout(type, 200);
     }());
 });
