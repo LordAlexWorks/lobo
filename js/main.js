@@ -11,8 +11,6 @@
     boOpen.on('click', function() {
         boDesc.addClass('open');
         loDesc.removeClass('open');
-
-        
     });
 
     loOpen.on('click', function () {
