@@ -93,6 +93,7 @@
     /* SLIDES */
     var slides = $('.slide');
     var activeSlide;
+    var overflowTimer = undefined;
 
     var initSlider = function() {
         activeSlide = 0;
@@ -103,9 +104,21 @@
 
     var activateSlide = function() {
         for (var i = 0; i < slides.length; i++) {
-            if (activeSlide === i) $(slides[i]).show();
-            else $(slides[i]).hide();
+            var shift = (i - activeSlide) * 100 + '%';
+
+            $(slides[i]).css('left', shift);
+            $(slides[i]).css('overflow', 'hidden');
         }
+
+        if (overflowTimer !== undefined) clearTimeout(overflowTimer);
+
+        overflowTimer = setTimeout(function() {
+            for (var i = 0; i < slides.length; i++) {
+                $(slides[i]).css('overflow', '');
+            }
+
+            overflowTimer = undefined;
+        }, 2000);
     };
 
     var checkArrows = function() {
