@@ -181,6 +181,7 @@ body {
   color: #ffc800;
   display: inline-block;
   cursor: pointer;
+  text-decoration: none;
 }
 .slides-container > .slide.slide-one .title .marked:hover {
   color: #E53988;
