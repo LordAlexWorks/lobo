@@ -147,4 +147,25 @@
     $('.left-arrow').on('click', prevSlide);
 
     initSlider();
+
+    $('.marked.we').on('click', function() {
+        activeSlide = 1;
+
+        checkArrows();
+        activateSlide();
+    });
+
+    $('.marked.them').on('click', function() {
+        activeSlide = 2;
+
+        checkArrows();
+        activateSlide();
+    });
+
+    $('.marked.us').on('click', function () {
+        activeSlide = 3;
+
+        checkArrows();
+        activateSlide();
+    });
 });
