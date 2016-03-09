@@ -1,6 +1,7 @@
 ﻿/* COLORS */
 @primary-one: #e42e2e;
 @primary-two: #ffc800;
+@primary-three: #E53988;
 @text-accent: #fff;
 @divider: #fddf70;
 
@@ -173,11 +174,6 @@ html, body {
                     font-size: 40px;
                 }
 
-                .marked {
-                    color: @primary-two;
-                    display: inline-block;
-                }
-
                 .underline {
                     display: inline-block;
                     line-height: 80px;
@@ -194,6 +190,20 @@ html, body {
                     @media(max-width: 419px) {
                         line-height: 40px;
                     }
+                }                
+
+                .marked {
+                    color: @primary-two;
+                    display: inline-block;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: @primary-three;
+
+                        &.underline, > .underline {
+                            border-color: @primary-three;
+                        }
+                    }                    
                 }
             }
 
