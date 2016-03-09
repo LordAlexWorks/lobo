@@ -221,6 +221,25 @@ body {
   position: absolute;
   width: 50%;
 }
+@media (max-width: 519px) {
+  .slides-container > .slide.slide-two .bo,
+  .slides-container > .slide.slide-two .lo {
+    width: 100%;
+  }
+  .slides-container > .slide.slide-two .bo .text-mobile,
+  .slides-container > .slide.slide-two .lo .text-mobile {
+    display: block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #ffc800;
+    border-radius: 50px;
+    font-size: 42px;
+    color: #fff;
+  }
+}
 @media (min-width: 720px) {
   .slides-container > .slide.slide-two .bo,
   .slides-container > .slide.slide-two .lo {
@@ -235,6 +254,12 @@ body {
   -o-transition: opacity 1s ease;
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
+}
+@media (max-width: 519px) {
+  .slides-container > .slide.slide-two .bo .img > img,
+  .slides-container > .slide.slide-two .lo .img > img {
+    display: none;
+  }
 }
 .slides-container > .slide.slide-two .bo .text,
 .slides-container > .slide.slide-two .lo .text {
@@ -255,6 +280,12 @@ body {
   -o-transition: opacity 1s ease;
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
+}
+@media (max-width: 519px) {
+  .slides-container > .slide.slide-two .bo .text,
+  .slides-container > .slide.slide-two .lo .text {
+    display: none;
+  }
 }
 .slides-container > .slide.slide-two .bo .text svg,
 .slides-container > .slide.slide-two .lo .text svg {
@@ -283,6 +314,11 @@ body {
   max-width: 544px;
   left: 0;
 }
+@media (max-width: 519px) {
+  .slides-container > .slide.slide-two .bo {
+    top: 20%;
+  }
+}
 @media (min-width: 1000px) {
   .slides-container > .slide.slide-two .bo {
     left: auto;
@@ -310,6 +346,11 @@ body {
   z-index: 30;
   max-width: 576px;
   right: 0;
+}
+@media (max-width: 519px) {
+  .slides-container > .slide.slide-two .lo {
+    top: 60%;
+  }
 }
 @media (min-width: 1000px) {
   .slides-container > .slide.slide-two .lo {
@@ -346,6 +387,7 @@ body {
   max-width: 600px;
   background: #ffc800;
   z-index: 120;
+  top: 0;
   color: #fff;
   padding: 24px 16px;
   -moz-transition: opacity 1.5s ease, transform 0.7s ease;

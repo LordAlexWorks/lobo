@@ -243,6 +243,26 @@ html, body {
                 position: absolute;
                 width: 50%;
 
+                @media(max-width: 519px) {
+                    width: 100%;
+
+                    .text-mobile {
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        line-height: 100px;
+                        margin: 0 auto;
+
+                        text-align: center;
+
+                        border: 2px solid @primary-two;
+                        border-radius: 50px;
+
+                        font-size: 42px;
+                        color: #fff;
+                    }
+                }
+
                 @media(min-width: 720px) { 
                     width: 40%;
                 }
@@ -252,6 +272,10 @@ html, body {
                     position: relative;
 
                     .transition(opacity 1s ease);
+
+                    @media(max-width: 519px) {
+                        display: none;
+                    }
                 }
 
                 .text {
@@ -269,7 +293,11 @@ html, body {
                     box-sizing: border-box;
                     padding-left: 5px;                    
 
-                    .transition(opacity 1s ease);                    
+                    .transition(opacity 1s ease);     
+                    
+                    @media(max-width: 519px) {
+                        display: none;
+                    }               
                     
                     svg {
                         position: absolute;
@@ -300,6 +328,10 @@ html, body {
                 max-width: 544px;
                 left: 0;
 
+                @media(max-width: 519px) {
+                    top: 20%;
+                }
+
                 @media(min-width: 1000px) {    
                     left: auto;
                     right: 50%;
@@ -326,6 +358,10 @@ html, body {
                 z-index: 30;
                 max-width: 576px;
                 right: 0;
+
+                @media(max-width: 519px) {
+                    top: 60%;
+                }
 
                 @media(min-width: 1000px) {                    
                     right: 5%;
@@ -360,6 +396,7 @@ html, body {
                 max-width: 600px;
                 background: @primary-two;
                 z-index: 120;
+                top: 0;
 
                 color: @text-accent;
 

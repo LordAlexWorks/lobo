@@ -1,8 +1,8 @@
 ﻿$(function () {
     var boCat = $('.bo img'),
         loCat = $('.lo img'),
-        boOpen = $('.bo .text'),
-        loOpen = $('.lo .text'),
+        boOpen = $('.bo .text, .bo .text-mobile'),
+        loOpen = $('.lo .text, .lo .text-mobile'),
         boDesc = $('.bo-desc'),
         loDesc = $('.lo-desc'),
         boClose = $('.bo-desc .close'),
@@ -26,7 +26,7 @@
         loDesc.removeClass('open');
     });
 
-    var cats = [boCat, loCat, boOpen, loOpen];
+    var cats = [boCat, loCat, $('.bo .text'), $('.lo .text')];
 
     $(cats).each(function (i, e) { e.addClass('invisible'); });
 
