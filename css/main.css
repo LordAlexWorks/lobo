@@ -27,6 +27,9 @@ body {
 .clean {
   clear: both;
 }
+.invisible {
+  opacity: 0 !important;
+}
 .right-arrow,
 .left-arrow {
   position: fixed;
@@ -228,6 +231,10 @@ body {
 .slides-container > .slide.slide-two .lo .img > img {
   width: 100%;
   position: relative;
+  -moz-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 .slides-container > .slide.slide-two .bo .text,
 .slides-container > .slide.slide-two .lo .text {
@@ -245,6 +252,10 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 5px;
+  -moz-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 .slides-container > .slide.slide-two .bo .text:hover,
 .slides-container > .slide.slide-two .lo .text:hover {

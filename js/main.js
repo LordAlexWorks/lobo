@@ -26,6 +26,21 @@
         loDesc.removeClass('open');
     });
 
+    var cats = [boCat, loCat, boOpen, loOpen];
+
+    $(cats).each(function (i, e) { e.addClass('invisible'); });
+
+    var catsFadeIn = function (index) {
+        if (cats.length === index) return;
+
+        cats[index].removeClass('invisible');
+        index++;
+
+        setTimeout(function() {
+            catsFadeIn(index);
+        }, 1500);
+    };
+
     var Animation = function(element, options) {
         var self = this;
 
@@ -92,9 +107,9 @@
     var activeSlide;
     var overflowTimer = undefined;
 
-    var weSlideIndex = 2;
-    var themSlideIndex = 3;
-    var usSlideIndex = 4;
+    var weSlideIndex = 1;
+    var themSlideIndex = 2;
+    var usSlideIndex = 3;
 
     var initSlider = function() {
         activeSlide = 0;
@@ -122,6 +137,12 @@
 
             overflowTimer = undefined;
         }, animTime);
+
+        if (activeSlide === weSlideIndex) {
+            setTimeout(function() {
+                catsFadeIn(0);
+            }, animTime);
+        }
     };
 
     var checkArrows = function() {
@@ -173,7 +194,6 @@
     });
 
     /* GRADIENT */
-
     var colors = new Array(
       [255, 0, 0],
       [255, 165, 0],
@@ -197,20 +217,19 @@
         var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
         var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
         var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-        var color1 = "rgb(" + r1 + "," + g1 + "," + b1 + ")";
+        var color1 = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
 
         var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
         var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
         var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-        var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
+        var color2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
 
-        $('.slide-one').css({
-            background: "-webkit-gradient(linear, left top, right top, from(" + color1 + "), to(" + color2 + "))"
-        }).css({
-            background: "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)"
-        });
+        $('.slide-one')
+            .css({ background: '-webkit-gradient(linear, left top, right top, from(' + color1 + '), to(' + color2 + '))' })
+            .css({ background: '-moz-linear-gradient(left, ' + color1 + ' 0%, ' + color2 + ' 100%)' });
 
         step += gradientSpeed;
+
         if (step >= 1) {
             step %= 1;
             colorIndices[0] = colorIndices[1];
@@ -218,7 +237,6 @@
 
             colorIndices[1] = (colorIndices[1] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
             colorIndices[3] = (colorIndices[3] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
-
         }
     }
 
