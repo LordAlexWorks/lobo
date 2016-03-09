@@ -64,6 +64,7 @@ body {
 .left-arrow > i {
   position: relative;
   top: -2px;
+  left: -2px;
 }
 .right-arrow {
   right: 50px;
@@ -321,6 +322,9 @@ body {
   z-index: 120;
   color: #fff;
   padding: 24px 16px;
+}
+.slides-container > .slide.slide-two .desc.lo-desc {
+  right: 0;
 }
 .slides-container > .slide.slide-two .desc .close {
   cursor: pointer;

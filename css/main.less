@@ -91,6 +91,7 @@ html, body {
     > i {
         position: relative;
         top: -2px;
+        left: -2px;
     }
 }
 
@@ -339,7 +340,11 @@ html, body {
 
                 color: @text-accent;
 
-                padding: 24px 16px;
+                padding: 24px 16px;                
+
+                &.lo-desc {
+                    right: 0;
+                }
 
                 .close {
                     cursor: pointer;
