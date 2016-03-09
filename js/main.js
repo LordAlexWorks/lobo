@@ -8,25 +8,24 @@
         boClose = $('.bo-desc .close'),
         loClose = $('.lo-desc .close');
 
-    boDesc.hide();
-    loDesc.hide();
-
     boOpen.on('click', function() {
-        boDesc.show();
-        loDesc.hide();
+        boDesc.addClass('open');
+        loDesc.removeClass('open');
+
+        
     });
 
     loOpen.on('click', function () {
-        loDesc.show();
-        boDesc.hide();
+        boDesc.removeClass('open');
+        loDesc.addClass('open');
     });
 
     boClose.on('click', function () {
-        boDesc.hide();
+        boDesc.removeClass('open');
     });
 
     loClose.on('click', function () {
-        loDesc.hide();
+        loDesc.removeClass('open');
     });
 
     var Animation = function(element, options) {
