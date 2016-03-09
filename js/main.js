@@ -33,7 +33,6 @@
     var animateCircle = function(circleSelector) {
         var val = 0;
         var $circle = $(circleSelector + ' circle');
-        console.log($circle);
 
         var draw = function() {
             var r = $circle.attr('r');
@@ -54,6 +53,7 @@
 
     var catsFadeIn = function (index) {
         if (cats.length === index) {
+            cats = [];
             return;
         }
 
