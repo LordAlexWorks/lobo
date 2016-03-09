@@ -261,7 +261,6 @@ html, body {
                     height: 70px;
                     line-height: 70px;
                     text-align: center;
-                    border: 2px solid @primary-two;
                     font-size: 34px;
                     border-radius: 70px;
                     cursor: pointer;
@@ -270,11 +269,27 @@ html, body {
                     box-sizing: border-box;
                     padding-left: 5px;                    
 
-                    .transition(opacity 1s ease);
+                    .transition(opacity 1s ease);                    
+                    
+                    svg {
+                        position: absolute;
+                        top: -2px;
+                        left: -2px;
+                    }                    
+
+                    .progress-circle circle {
+                      stroke-dashoffset: -300px;
+                      stroke-width: 2px;
+                      stroke: @primary-two;
+                    }
 
                     &:hover {
                         background: @primary-two;
                         border-color: @text-accent;
+
+                        .progress-circle circle {
+                            stroke: #fff;
+                        }
                     }
                 }
             }

@@ -30,13 +30,52 @@
 
     $(cats).each(function (i, e) { e.addClass('invisible'); });
 
+    var animateCircle = function(circleSelector) {
+        var val = 0;
+        var $circle = $(circleSelector + ' circle');
+        console.log($circle);
+
+        var draw = function() {
+            var r = $circle.attr('r');
+            var c = Math.PI * (r * 2);
+            var pct = ((100 - val) / 100) * c * -1;
+
+            $circle.css({ strokeDashoffset: pct });
+
+            
+            console.log(val);
+
+            val++;
+            if (val < 100) setTimeout(draw, 10);
+            else {
+                $circle.css({ strokeDashoffset: 0 });
+            }
+        }
+
+        draw();
+    };
+
+
     var catsFadeIn = function (index) {
-        if (cats.length === index) return;
+        if (cats.length === index) {
+            return;
+        }
 
         cats[index].removeClass('invisible');
         index++;
 
-        setTimeout(function() {
+        if (index === 2) {
+            setTimeout(function() {
+                animateCircle('.bo .progress-circle');
+            }, 1700);
+        }
+        else if (index === 3) {
+            setTimeout(function () {
+                animateCircle('.lo .progress-circle');
+            }, 1700);
+        }
+
+        setTimeout(function () {
             catsFadeIn(index);
         }, 1500);
     };

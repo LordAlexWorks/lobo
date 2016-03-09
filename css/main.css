@@ -244,7 +244,6 @@ body {
   height: 70px;
   line-height: 70px;
   text-align: center;
-  border: 2px solid #ffc800;
   font-size: 34px;
   border-radius: 70px;
   cursor: pointer;
@@ -257,10 +256,26 @@ body {
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
 }
+.slides-container > .slide.slide-two .bo .text svg,
+.slides-container > .slide.slide-two .lo .text svg {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+.slides-container > .slide.slide-two .bo .text .progress-circle circle,
+.slides-container > .slide.slide-two .lo .text .progress-circle circle {
+  stroke-dashoffset: -300px;
+  stroke-width: 2px;
+  stroke: #ffc800;
+}
 .slides-container > .slide.slide-two .bo .text:hover,
 .slides-container > .slide.slide-two .lo .text:hover {
   background: #ffc800;
   border-color: #fff;
+}
+.slides-container > .slide.slide-two .bo .text:hover .progress-circle circle,
+.slides-container > .slide.slide-two .lo .text:hover .progress-circle circle {
+  stroke: #fff;
 }
 .slides-container > .slide.slide-two .bo {
   top: 10%;
