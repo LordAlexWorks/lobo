@@ -95,18 +95,20 @@
     var activeSlide;
     var overflowTimer = undefined;
 
-    var weSlideIndex = 1;
-    var themSlideIndex = 2;
-    var usSlideIndex = 3;
+    var weSlideIndex = 2;
+    var themSlideIndex = 3;
+    var usSlideIndex = 4;
 
     var initSlider = function() {
         activeSlide = 0;
         $('.left-arrow').hide();
 
-        activateSlide();
+        activateSlide(0);
     };
 
-    var activateSlide = function() {
+    var activateSlide = function (animTime) {
+        if (animTime === undefined) animTime = 2000;
+
         for (var i = 0; i < slides.length; i++) {
             var shift = (i - activeSlide) * 100 + '%';
 
@@ -122,7 +124,7 @@
             }
 
             overflowTimer = undefined;
-        }, 2000);
+        }, animTime);
     };
 
     var checkArrows = function() {
