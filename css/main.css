@@ -12,14 +12,14 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 html,
 body {
   width: 100%;
   height: 100%;
   font-family: 'Roboto Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .hide {
   display: none;
@@ -52,12 +52,7 @@ body {
   z-index: 100;
 }
 .left-arrow {
-  left: 50px;
-}
-@media (max-width: 999px) {
-  .left-arrow {
-    left: 32px;
-  }
+  left: 25px;
 }
 @media (max-width: 767px) {
   .left-arrow {
@@ -70,12 +65,7 @@ body {
   left: -2px;
 }
 .right-arrow {
-  right: 50px;
-}
-@media (max-width: 999px) {
-  .right-arrow {
-    right: 32px;
-  }
+  right: 25px;
 }
 @media (max-width: 767px) {
   .right-arrow {
@@ -473,7 +463,7 @@ body {
   background: #ffc800;
 }
 .slides-container > .slide.slide-three .projects-container {
-  max-width: 1248px;
+  max-width: 1238px;
   margin: 0 auto;
   padding: 8px 16px;
 }
@@ -483,22 +473,17 @@ body {
   }
 }
 @media (min-width: 1250px) {
-  .slides-container > .slide.slide-three .projects-container .projects {
-    position: absolute;
-    top: 50%;
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+  .slides-container > .slide.slide-three .projects-container {
+    padding: 48px 64px;
   }
 }
 .slides-container > .slide.slide-three .projects-container .project {
   width: 100%;
-  max-width: 400px;
+  width: 370px;
   margin: 0 auto 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid #fddf70;
+  overflow: hidden;
   opacity: 0;
   -moz-transition: opacity 1s ease;
   -o-transition: opacity 1s ease;
@@ -555,7 +540,7 @@ body {
 @media (min-width: 1250px) {
   .slides-container > .slide.slide-three .projects-container .project .title {
     margin-bottom: 32px;
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 .slides-container > .slide.slide-three .projects-container .project .desc {
@@ -565,11 +550,6 @@ body {
 @media (min-width: 720px) {
   .slides-container > .slide.slide-three .projects-container .project .desc {
     font-size: 18px;
-  }
-}
-@media (min-width: 1250px) {
-  .slides-container > .slide.slide-three .projects-container .project .desc {
-    font-size: 20px;
   }
 }
 .slides-container > .slide.slide-four {
