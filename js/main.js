@@ -137,8 +137,41 @@
         time: 50
     });
 
+    var projectsVlineDraw = function(line) {
+        var currentY = parseInt(line.attr('y2'));
+
+        if (currentY >= 500) {
+            return;
+        }
+
+        line.attr('y2', currentY + 5);
+
+        setTimeout(function () {
+            projectsVlineDraw(line);
+        }, 10);
+    }
+
+    var projectsHlineDraw = function (line) {
+        var currentX = parseInt(line.attr('x2'));
+        
+        if (currentX >= 1110) {
+            projectsVlineDraw($($('.projects-container .lines line')[1]));
+            projectsVlineDraw($($('.projects-container .lines line')[2]));
+            return;
+        }
+
+        line.attr('x2', currentX + 10);
+
+        setTimeout(function() {
+            projectsHlineDraw(line);
+        }, 10);
+    };
+
     var projectsFadeIn = function (projects) {
-        if (projects.length === 0) return;
+        if (projects.length === 0) {
+            projectsHlineDraw($($('.projects-container .lines line')[0]));
+            return;
+        }
 
         var project = $(projects[0]);
 
