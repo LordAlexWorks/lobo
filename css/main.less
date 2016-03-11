@@ -490,6 +490,40 @@ html, body {
                     opacity: 0;
                     .transition(opacity 1s ease);
 
+                    position: relative;
+
+                    cursor: pointer;
+
+                    .info {
+                        position: relative;
+                        right:0;
+
+                        .transition(right 0.2s ease);
+                    }
+
+                    .link {                        
+                        position: absolute;                        
+                        top: 50%;
+                        left: 150%;
+                        .transform(translate(-50%, -50%));
+
+                        font-size: 72px;
+                        text-align: center;
+                        color: white;
+
+                        .transition(left 0.2s ease);
+                    }
+
+                    &:hover {
+                        .info {
+                            right: 100%;
+                        }
+
+                        .link {
+                            left: 50%;
+                        }
+                    }
+
                     &.fade-in {
                         opacity: 1;
                     }                         

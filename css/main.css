@@ -489,6 +489,39 @@ body {
   -o-transition: opacity 1s ease;
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
+  position: relative;
+  cursor: pointer;
+}
+.slides-container > .slide.slide-three .projects-container .project .info {
+  position: relative;
+  right: 0;
+  -moz-transition: right 0.2s ease;
+  -o-transition: right 0.2s ease;
+  -webkit-transition: right 0.2s ease;
+  transition: right 0.2s ease;
+}
+.slides-container > .slide.slide-three .projects-container .project .link {
+  position: absolute;
+  top: 50%;
+  left: 150%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 72px;
+  text-align: center;
+  color: white;
+  -moz-transition: left 0.2s ease;
+  -o-transition: left 0.2s ease;
+  -webkit-transition: left 0.2s ease;
+  transition: left 0.2s ease;
+}
+.slides-container > .slide.slide-three .projects-container .project:hover .info {
+  right: 100%;
+}
+.slides-container > .slide.slide-three .projects-container .project:hover .link {
+  left: 50%;
 }
 .slides-container > .slide.slide-three .projects-container .project.fade-in {
   opacity: 1;
