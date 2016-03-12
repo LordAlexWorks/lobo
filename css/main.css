@@ -686,3 +686,15 @@ body {
   position: relative;
   top: 8px;
 }
+.slides-container > .slide.slide-four .content-container .fruit,
+.slides-container > .slide.slide-four .content-container .text {
+  opacity: 0;
+  -moz-transition: opacity ease 1s;
+  -o-transition: opacity ease 1s;
+  -webkit-transition: opacity ease 1s;
+  transition: opacity ease 1s;
+}
+.slides-container > .slide.slide-four .content-container .fruit.fade-in,
+.slides-container > .slide.slide-four .content-container .text.fade-in {
+  opacity: 1;
+}

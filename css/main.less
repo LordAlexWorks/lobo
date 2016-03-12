@@ -693,6 +693,15 @@ html, body {
                         top: 8px;
                     }
                 }
+
+                .fruit, .text {
+                    opacity: 0;
+                    .transition(opacity ease 1s);
+
+                    &.fade-in {
+                        opacity: 1;
+                    }                    
+                }
             }
         }
     }

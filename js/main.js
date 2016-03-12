@@ -182,6 +182,20 @@
             projectsFadeIn(projects);
         }, 900);
     };
+
+    var fruitsFadeId = function (fruits) {
+        if (fruits.length === 0) {
+            $('.slide-four .text').addClass('fade-in');
+            return;
+        }
+
+        $(fruits[0]).addClass('fade-in');
+        fruits = fruits.splice(1);
+
+        setTimeout(function() {
+            fruitsFadeId(fruits);
+        }, 900);
+    };
     
     /* GRADIENT */
     var colors = new Array(
@@ -243,7 +257,7 @@
     var homeSlideIndex = 0;
     var weSlideIndex = 1, weAnimated = false;
     var themSlideIndex = 2, themAnimated = false;
-    var usSlideIndex = 3;
+    var usSlideIndex = 3, usAnimated = false;
 
     var initSlider = function() {
         activeSlide = 0;
@@ -290,6 +304,13 @@
 
             setTimeout(function () {
                 projectsFadeIn($('.projects .project'));
+            }, animTime);
+        }
+        else if (activeSlide === usSlideIndex && !usAnimated) {
+            usAnimated = true;
+
+            setTimeout(function () {
+                fruitsFadeId($('.fruits .fruit'));
             }, animTime);
         }
     };
