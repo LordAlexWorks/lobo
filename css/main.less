@@ -477,13 +477,22 @@ html, body {
 
                 @media(min-width: 1250px) {
                     padding: 48px 64px;
+                    position: relative;
+                    top: 50%;
+                    .transform(translateY(-50%));
                 }                
 
                 .lines {
+                    display: none;
+
                     position: absolute;
 
                     height: 500px;
                     width: 1110px;
+
+                    @media(min-width: 1250px) {
+                        display: block;
+                    }
 
                     > line {
                         stroke: @divider;
@@ -504,6 +513,12 @@ html, body {
                     position: relative;
 
                     cursor: pointer;
+
+                    border-bottom: 1px solid @divider;
+
+                    @media(min-width: 1250px) {
+                        border-bottom: none;
+                    }
 
                     .info {
                         position: relative;
