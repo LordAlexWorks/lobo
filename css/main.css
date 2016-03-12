@@ -180,11 +180,11 @@ body {
   text-decoration: none;
 }
 .slides-container > .slide.slide-one .title .marked:hover {
-  color: #e53988;
+  color: #E53988;
 }
 .slides-container > .slide.slide-one .title .marked:hover.underline,
 .slides-container > .slide.slide-one .title .marked:hover > .underline {
-  border-color: #e53988;
+  border-color: #E53988;
 }
 .slides-container > .slide.slide-one .text {
   font-size: 26px;
@@ -258,7 +258,7 @@ body {
 .slides-container > .slide.slide-two .bo .text,
 .slides-container > .slide.slide-two .lo .text {
   position: absolute;
-  color: #ffffff;
+  color: #fff;
   width: 70px;
   height: 70px;
   line-height: 70px;
@@ -296,7 +296,7 @@ body {
 .slides-container > .slide.slide-two .bo .text:hover,
 .slides-container > .slide.slide-two .lo .text:hover {
   background: #ffc800;
-  border-color: #ffffff;
+  border-color: #fff;
 }
 .slides-container > .slide.slide-two .bo .text:hover .progress-circle circle,
 .slides-container > .slide.slide-two .lo .text:hover .progress-circle circle {
@@ -382,7 +382,7 @@ body {
   background: #ffc800;
   z-index: 120;
   top: 0;
-  color: #ffffff;
+  color: #fff;
   padding: 24px 16px;
   -moz-transition: opacity 1.5s ease, transform 0.7s ease;
   -o-transition: opacity 1.5s ease, transform 0.7s ease;
@@ -404,7 +404,7 @@ body {
   height: 32px;
   line-height: 30px;
   text-align: center;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   border-radius: 32px;
   position: absolute;
   top: 24px;
@@ -574,7 +574,7 @@ body {
 }
 .slides-container > .slide.slide-three .projects-container .project .desc {
   font-size: 16px;
-  color: #ffffff;
+  color: #fff;
 }
 @media (min-width: 720px) {
   .slides-container > .slide.slide-three .projects-container .project .desc {
@@ -639,6 +639,19 @@ body {
   display: inline-block;
   height: 110px;
 }
+.slides-container > .slide.slide-four .content-container .fruit a {
+  text-decoration: none;
+}
+.slides-container > .slide.slide-four .content-container .fruit .title {
+  position: relative;
+  top: 10px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+.slides-container > .slide.slide-four .content-container .fruit:hover .title {
+  color: #ffc800;
+}
 .slides-container > .slide.slide-four .content-container .fruit-1 {
   margin-right: 50px;
 }
@@ -654,4 +667,3 @@ body {
   position: relative;
   top: 8px;
 }
-/*# sourceMappingURL=main.css.map */

@@ -640,7 +640,26 @@ html, body {
 
                 .fruit {
                     display: inline-block;
-                    height: 110px;                  
+                    height: 110px;   
+                    
+                    a {                        
+                        text-decoration: none;
+                    }
+
+                    .title {
+                        position: relative;
+                        top: 10px;
+
+                        font-size: 18px;
+                        color: #fff;
+                        text-decoration: none;
+                    }       
+
+                    &:hover {
+                        .title {
+                            color: @primary-two;
+                        }                        
+                    }
                 }
 
                 .fruit-1 {
