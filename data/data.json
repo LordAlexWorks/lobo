@@ -37,5 +37,20 @@
                 "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
             }
         ]
+    },
+
+    "section-4": {
+        "projects": [
+            {
+                "logo": "imgs/fruit-1.png",
+                "title": "Fruit One",
+                "url": "https://google.com/"
+            },
+            {
+                "logo": "imgs/fruit-2.png",
+                "title": "Fruit Two",
+                "url": "https://google.com/"
+            }
+        ]
     }
 }

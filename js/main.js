@@ -445,10 +445,31 @@
                 projectDom.addClass('last');
             }
 
-            console.log(projectDom);
-            console.log(project);
-
-            $('.projects').append(projectDom);
+            $('.slide-three .projects').append(projectDom);
         }
+        $('<div class="clean"></div>').appendTo($('.slide-three .projects'));
+
+        for (var i = 0; i < data['section-4']['projects'].length; i++) {
+            var project = data['section-4']['projects'][i];
+            var projectDom = $(''
+                + '<div class="fruit">'
+                + '    <a target="_blank">'
+                + '        <img />'
+                + '        <div class="title"></div>'
+                + '    </a>'
+                + '</div>'
+                );
+
+            projectDom.find('a').attr('href', project['url']);
+            projectDom.find('img').attr('src', project['logo']);
+            projectDom.find('.title').html(project['title']);
+
+            if (i === data['section-4']['projects'].length - 1) {
+                projectDom.addClass('last');
+            }
+
+            $('.slide-four .fruits').append(projectDom);
+        }
+        $('<div class="clean"></div>').appendTo($('.slide-four .fruits'));
     });
 });
