@@ -415,4 +415,13 @@
         }
         else setTimeout(type, 10);
     }());
+
+    /* LOAD DATA */
+    $.getJSON('data/data.json', function (data) {
+        $('.bo-desc .title').html(data['section-2']['bo']['title']);
+        $('.bo-desc .text').html(data['section-2']['bo']['text']);
+
+        $('.lo-desc .title').html(data['section-2']['lo']['title']);
+        $('.lo-desc .text').html(data['section-2']['lo']['text']);
+    });
 });

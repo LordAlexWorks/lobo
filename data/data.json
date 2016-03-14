@@ -1,0 +1,12 @@
+﻿{
+    "section-2": {
+        "bo": {
+            "title": "Bolo Michelin",
+            "text": "Lorem Ipsum is simply dummy text of<br/>the printing and typesetting industry.<br/>Lorem Ipsum has been the industry's<br/>standard dummy text ever since<br/>the 1500s, when an unknown<br/>printer took a galley of type and<br/>scrambled it to make a type.<br/><br/>@bolomichen<br/>"
+        },
+        "lo": {
+            "title": "LordAlex Leon",
+            "text":  "Lorem Ipsum is simply dummy text of<br/>the printing and typesetting industry.<br/>Lorem Ipsum has been the industry's<br/>standard dummy text ever since<br/>the 1500s, when an unknown<br/>printer took a galley of type and<br/>scrambled it to make a type.<br/><br/>@lordalexleon<br/>"
+        }
+    }
+}
