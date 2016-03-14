@@ -379,21 +379,40 @@
         + '</div>',
         textCounter = 0,
         isTag,
+        isSpan,
         text;
 
     (function type() {
         text = str.slice(0, ++textCounter);
-        if (text === str) return;
+
+        if (text === str) {
+            markedHandlers();
+            return;
+        }
 
         $('.slide-one .content').html(text);
 
         var char = text.slice(-1);
-        if (char === '<') isTag = true;
+        if (char === '<') {
+            isTag = true;
+
+            var slice = str.slice(textCounter);
+
+            if (slice.indexOf('span') === 0) isSpan = true;
+            else if (slice.indexOf('/span') === 0) {
+                isSpan = false;
+
+                $('.slide-one .content').html(text.slice(0, text.length - 1));
+                setTimeout(type, 300);
+                return;
+            }
+        }
         if (char === '>') isTag = false;
-
-        markedHandlers();
-
+        
         if (isTag || char === ' ') return type();
-        setTimeout(type, 200);
+        if (isSpan) {
+            setTimeout(type, 100);
+        }
+        else setTimeout(type, 10);
     }());
 });
