@@ -6,7 +6,36 @@
         },
         "lo": {
             "title": "LordAlex Leon",
-            "text":  "Lorem Ipsum is simply dummy text of<br/>the printing and typesetting industry.<br/>Lorem Ipsum has been the industry's<br/>standard dummy text ever since<br/>the 1500s, when an unknown<br/>printer took a galley of type and<br/>scrambled it to make a type.<br/><br/>@lordalexleon<br/>"
+            "text": "Lorem Ipsum is simply dummy text of<br/>the printing and typesetting industry.<br/>Lorem Ipsum has been the industry's<br/>standard dummy text ever since<br/>the 1500s, when an unknown<br/>printer took a galley of type and<br/>scrambled it to make a type.<br/><br/>@lordalexleon<br/>"
         }
+    },
+
+    "section-3": {
+        "projects": [
+            {
+                "title": "01. Broadcom Picasa Interface",
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+            },
+            {
+                "title": "02. Broadcom Picasa Interface",
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+            },
+            {
+                "title": "03. Broadcom Picasa Interface",
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+            },
+            {
+                "title": "04. Broadcom Picasa Interface",
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+            },
+            {
+                "title": "05. Broadcom Picasa Interface",
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+            },
+            {
+                "title": "06. Broadcom Picasa Interface",
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+            }
+        ]
     }
 }

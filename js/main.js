@@ -423,5 +423,32 @@
 
         $('.lo-desc .title').html(data['section-2']['lo']['title']);
         $('.lo-desc .text').html(data['section-2']['lo']['text']);
+
+        // http://dimsemenov.com/plugins/magnific-popup/ for the gallery
+
+        for (var i = 0; i < data['section-3']['projects'].length; i++) {
+            var project = data['section-3']['projects'][i];
+            var projectDom = $(''
+                + '<div class="project">'
+                + '    <div class="info">'
+                + '        <div class="title"></div>'
+                + '        <div class="desc"></div>'
+                + '    </div>'
+                + '    <div class="link"><i class="fa fa-eye"></i></div>'
+                + '</div>'
+                );
+
+            projectDom.find('.title').html(project['title']);
+            projectDom.find('.desc').html(project['desc']);
+
+            if (i === data['section-3']['projects'].length - 1) {
+                projectDom.addClass('last');
+            }
+
+            console.log(projectDom);
+            console.log(project);
+
+            $('.projects').append(projectDom);
+        }
     });
 });

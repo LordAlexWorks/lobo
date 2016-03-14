@@ -180,11 +180,11 @@ body {
   text-decoration: none;
 }
 .slides-container > .slide.slide-one .title .marked:hover {
-  color: #E53988;
+  color: #e53988;
 }
 .slides-container > .slide.slide-one .title .marked:hover.underline,
 .slides-container > .slide.slide-one .title .marked:hover > .underline {
-  border-color: #E53988;
+  border-color: #e53988;
 }
 .slides-container > .slide.slide-one .text {
   font-size: 26px;
@@ -258,7 +258,7 @@ body {
 .slides-container > .slide.slide-two .bo .text,
 .slides-container > .slide.slide-two .lo .text {
   position: absolute;
-  color: #fff;
+  color: #ffffff;
   width: 70px;
   height: 70px;
   line-height: 70px;
@@ -296,7 +296,7 @@ body {
 .slides-container > .slide.slide-two .bo .text:hover,
 .slides-container > .slide.slide-two .lo .text:hover {
   background: #ffc800;
-  border-color: #fff;
+  border-color: #ffffff;
 }
 .slides-container > .slide.slide-two .bo .text:hover .progress-circle circle,
 .slides-container > .slide.slide-two .lo .text:hover .progress-circle circle {
@@ -382,7 +382,7 @@ body {
   background: #ffc800;
   z-index: 120;
   top: 0;
-  color: #fff;
+  color: #ffffff;
   padding: 24px 16px;
   -moz-transition: opacity 1.5s ease, transform 0.7s ease;
   -o-transition: opacity 1.5s ease, transform 0.7s ease;
@@ -404,7 +404,7 @@ body {
   height: 32px;
   line-height: 30px;
   text-align: center;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   border-radius: 32px;
   position: absolute;
   top: 24px;
@@ -499,9 +499,14 @@ body {
   stroke: #fddf70;
   stroke-width: 1px;
 }
+@media (min-width: 1250px) {
+  .slides-container > .slide.slide-three .projects-container .projects {
+    width: 1110px;
+    height: 500px;
+  }
+}
 .slides-container > .slide.slide-three .projects-container .project {
   width: 100%;
-  width: 370px;
   margin: 0 auto 24px;
   padding-bottom: 24px;
   overflow: hidden;
@@ -517,6 +522,7 @@ body {
 @media (min-width: 1250px) {
   .slides-container > .slide.slide-three .projects-container .project {
     border-bottom: none;
+    width: 370px;
   }
 }
 .slides-container > .slide.slide-three .projects-container .project .info {
@@ -593,7 +599,7 @@ body {
 }
 .slides-container > .slide.slide-three .projects-container .project .desc {
   font-size: 16px;
-  color: #fff;
+  color: #ffffff;
 }
 @media (min-width: 720px) {
   .slides-container > .slide.slide-three .projects-container .project .desc {
@@ -698,3 +704,4 @@ body {
 .slides-container > .slide.slide-four .content-container .text.fade-in {
   opacity: 1;
 }
+/*# sourceMappingURL=main.css.map */
