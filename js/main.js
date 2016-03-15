@@ -445,6 +445,14 @@
                 projectDom.addClass('last');
             }
 
+            projectDom.magnificPopup({
+                items: project['imgs'],
+                gallery: {
+                    enabled: true
+                },
+                type: 'image'
+            });
+
             $('.slide-three .projects').append(projectDom);
         }
         $('<div class="clean"></div>').appendTo($('.slide-three .projects'));
@@ -471,5 +479,7 @@
             $('.slide-four .fruits').append(projectDom);
         }
         $('<div class="clean"></div>').appendTo($('.slide-four .fruits'));
+
+        
     });
 });

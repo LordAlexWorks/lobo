@@ -14,27 +14,51 @@
         "projects": [
             {
                 "title": "01. Broadcom Picasa Interface",
-                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published..",
+                "imgs": [
+                    { "src": "imgs/test-1.jpg" },
+                    { "src": "imgs/test-2.jpg" }
+                ]
             },
             {
                 "title": "02. Broadcom Picasa Interface",
-                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published..",
+                "imgs": [
+                    { "src": "imgs/test-1.jpg" },
+                    { "src": "imgs/test-2.jpg" }
+                ]
             },
             {
                 "title": "03. Broadcom Picasa Interface",
-                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published..",
+                "imgs": [
+                    { "src": "imgs/test-1.jpg" },
+                    { "src": "imgs/test-2.jpg" }
+                ]
             },
             {
                 "title": "04. Broadcom Picasa Interface",
-                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published..",
+                "imgs": [
+                    { "src": "imgs/test-1.jpg" },
+                    { "src": "imgs/test-2.jpg" }
+                ]
             },
             {
                 "title": "05. Broadcom Picasa Interface",
-                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published..",
+                "imgs": [
+                    { "src": "imgs/test-1.jpg" },
+                    { "src": "imgs/test-2.jpg" }
+                ]
             },
             {
                 "title": "06. Broadcom Picasa Interface",
-                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published.."
+                "desc": "Facebook and YouTube channels. It also also allow customers to subscribe to published..<br/>Facebook and YouTube channels. It also also allow customers to subscribe to published..",
+                "imgs": [
+                    { "src": "imgs/test-1.jpg" },
+                    { "src": "imgs/test-2.jpg" }
+                ]
             }
         ]
     },
