@@ -448,11 +448,10 @@ body {
   }
 }
 .slides-container > .slide.slide-two .desc .text a {
-  color: #fff;
-  text-decoration: none;
+  color: #e42e2e;
 }
 .slides-container > .slide.slide-two .desc .text a:hover {
-  color: #e42e2e;
+  color: #af1717;
 }
 .slides-container > .slide.slide-two .desc.open {
   opacity: 1;
