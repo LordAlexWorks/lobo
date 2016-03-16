@@ -382,7 +382,26 @@
         isSpan,
         text;
 
-    (function type() {
+    var content = $('.slide-one .content');
+
+    var textFadedOut = false;
+
+
+    var textBlink = function (times) {
+        if (textFadedOut) content.css('opacity', 1);
+        else content.css('opacity', 0);
+
+        times--;
+        textFadedOut = !textFadedOut;
+
+        if (times === 0) return;
+
+        setTimeout(function() {
+            textBlink(times);
+        }, 400);
+    };
+
+    var type = function() {
         text = str.slice(0, ++textCounter);
 
         if (text === str) {
@@ -390,7 +409,7 @@
             return;
         }
 
-        $('.slide-one .content').html(text);
+        content.html(text);
 
         var char = text.slice(-1);
         if (char === '<') {
@@ -402,19 +421,19 @@
             else if (slice.indexOf('/span') === 0) {
                 isSpan = false;
 
-                $('.slide-one .content').html(text.slice(0, text.length - 1));
-                setTimeout(type, 300);
+                content.html(text.slice(0, text.length - 1));
+                textBlink(4);
+                setTimeout(type, 1300);
                 return;
             }
         }
         if (char === '>') isTag = false;
         
         if (isTag || char === ' ') return type();
-        if (isSpan) {
-            setTimeout(type, 100);
-        }
-        else setTimeout(type, 10);
-    }());
+        setTimeout(type, 150);
+    };
+
+    type();
 
     /* LOAD DATA */
     $.getJSON('data/data.json', function (data) {
