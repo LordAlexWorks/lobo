@@ -380,16 +380,16 @@
         textCounter = 0,
         isTag,
         isSpan,
-        text;
+        text,
+        wordFlashIndex = -1;
 
     var content = $('.slide-one .content');
 
     var textFadedOut = false;
 
-
     var textBlink = function (times) {
-        if (textFadedOut) content.css('opacity', 1);
-        else content.css('opacity', 0);
+        if (textFadedOut) $($('.slide-one .content .marked')[wordFlashIndex]).css('opacity', 1);
+        else $($('.slide-one .content .marked')[wordFlashIndex]).css('opacity', 0);
 
         times--;
         textFadedOut = !textFadedOut;
@@ -422,8 +422,9 @@
                 isSpan = false;
 
                 content.html(text.slice(0, text.length - 1));
+                wordFlashIndex++;
                 textBlink(4);
-                setTimeout(type, 1300);
+                setTimeout(type, 1500);
                 return;
             }
         }
@@ -499,7 +500,5 @@
             $('.slide-four .fruits').append(projectDom);
         }
         $('<div class="clean"></div>').appendTo($('.slide-four .fruits'));
-
-        
     });
 });
