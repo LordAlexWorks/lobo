@@ -450,7 +450,8 @@
                 gallery: {
                     enabled: true
                 },
-                type: 'image'
+                type: 'image',
+                removalDelay: 400
             });
 
             $('.slide-three .projects').append(projectDom);

@@ -722,3 +722,29 @@ html, body {
         }
     }
 }
+
+
+/* SLIDESHOW */
+.mfp-bg {
+  opacity: 0;
+
+  .transition(opacity 0.3s ease-out);
+}
+
+.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  .transition(opacity 0.3s ease-out);
+}
+
+.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+.mfp-bg.mfp-removing, .mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
