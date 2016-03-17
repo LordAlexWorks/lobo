@@ -381,7 +381,8 @@
         isTag,
         isSpan,
         text,
-        wordFlashIndex = -1;
+        wordFlashIndex = -1,
+        faster;
 
     var content = $('.slide-one .content');
 
@@ -403,6 +404,7 @@
 
     var type = function() {
         text = str.slice(0, ++textCounter);
+        var slice = str.slice(textCounter);
 
         if (text === str) {
             markedHandlers();
@@ -415,8 +417,6 @@
         if (char === '<') {
             isTag = true;
 
-            var slice = str.slice(textCounter);
-
             if (slice.indexOf('span') === 0) isSpan = true;
             else if (slice.indexOf('/span') === 0) {
                 isSpan = false;
@@ -428,10 +428,15 @@
                 return;
             }
         }
-        if (char === '>') isTag = false;
+        else if (char === '>') isTag = false;
+        else if (slice.indexOf('Lobo ') === 0) {
+            faster = true;
+        }
         
         if (isTag || char === ' ') return type();
-        setTimeout(type, 150);
+
+        if (faster) setTimeout(type, 30);
+        else setTimeout(type, 150);
     };
 
     type();
