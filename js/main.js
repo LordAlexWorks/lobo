@@ -287,7 +287,7 @@
         }, animTime);
 
         if (activeSlide === homeSlideIndex) {
-            updateGradient();
+            //updateGradient();
         } else {
             clearTimeout(gradientTimeout);
         }
@@ -369,11 +369,11 @@
     var str = '<div class="title">'
         + '    <span class="marked underline we">We</span> make stuff'
         + '</div>'
-        + ''
+        + '<br>'
         + '<div class="title">'
         + '    for <span class="marked underline them">them</span>, <a href="mailto:info@lobo.io" class="marked you">y<span class="underline">ou</span></a> and <span class="marked underline us">us</span>.'
         + '</div>'
-        + ''
+        + '<br>'
         + '<div class="text">'
         + '    Lobo are a hard-working multi-disiplinary angency deliviring high quality projects.'
         + '</div>',
@@ -381,26 +381,9 @@
         isTag,
         isSpan,
         text,
-        wordFlashIndex = -1,
         faster;
 
     var content = $('.slide-one .content');
-
-    var textFadedOut = false;
-
-    var textBlink = function (times) {
-        if (textFadedOut) $($('.slide-one .content .marked')[wordFlashIndex]).css('opacity', 1);
-        else $($('.slide-one .content .marked')[wordFlashIndex]).css('opacity', 0);
-
-        times--;
-        textFadedOut = !textFadedOut;
-
-        if (times === 0) return;
-
-        setTimeout(function() {
-            textBlink(times);
-        }, 400);
-    };
 
     var type = function() {
         text = str.slice(0, ++textCounter);
@@ -411,8 +394,6 @@
             return;
         }
 
-        content.html(text);
-
         var char = text.slice(-1);
         if (char === '<') {
             isTag = true;
@@ -420,11 +401,8 @@
             if (slice.indexOf('span') === 0) isSpan = true;
             else if (slice.indexOf('/span') === 0) {
                 isSpan = false;
+                setTimeout(type, 1000);
 
-                content.html(text.slice(0, text.length - 1));
-                wordFlashIndex++;
-                textBlink(4);
-                setTimeout(type, 1500);
                 return;
             }
         }
@@ -434,6 +412,14 @@
         }
         
         if (isTag || char === ' ') return type();
+
+        if (isSpan) {
+            text += '</span><div class="slash">|</div>';
+        } else {
+            text += '<div class="slash">|</div>';
+        }
+
+        content.html(text);
 
         if (faster) setTimeout(type, 30);
         else setTimeout(type, 150);
