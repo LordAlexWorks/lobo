@@ -287,7 +287,7 @@
         }, animTime);
 
         if (activeSlide === homeSlideIndex) {
-            //updateGradient();
+            updateGradient();
         } else {
             clearTimeout(gradientTimeout);
         }
