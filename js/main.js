@@ -437,7 +437,7 @@
 
         // http://dimsemenov.com/plugins/magnific-popup/ for the gallery
 
-        for (var i = 0; i < data['section-3']['projects'].length; i++) {
+        for (var i = 0; i < data['section-3']['projects'].length && i < 6; i++) {
             var project = data['section-3']['projects'][i];
             var projectDom = $(''
                 + '<div class="project">'
