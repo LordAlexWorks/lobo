@@ -714,13 +714,21 @@ html, body {
             }
 
             .clients-page {
+                position: relative; 
+
                 @media (min-width: 1250px) {                    
                     min-height: 100%;
                 }
             }
 
             .clients-container {
+                position: absolute;
                 padding: 80px;
+                width: 100%;
+                max-width: 1100px;
+                top: 50%;
+                left: 50%;
+                .transform(translate(-50%, -50%));
 
                 .clients {
                     display: table;
