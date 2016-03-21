@@ -34,6 +34,13 @@
     transform: @params;
 }
 
+.animation (@params) {
+    -moz-animation: @params;
+    -o-animation: @params;
+    -webkit-animation: @params;
+    animation: @params;
+}
+
 /* ANIATIONS */
 @-moz-keyframes blink {
     0% {
@@ -69,6 +76,24 @@
     100% {
         opacity: 0;
     }
+}
+
+@-moz-keyframes bounce-arrow {
+    0%, 20%, 50%, 80%, 100% { .transform(translate(-50%, 0)) }
+    40% { .transform(translate(-50%, -7.5px)) }
+    60%{ .transform(translate(-50%, -2.5px)) }
+}
+
+@-webkit-keyframes bounce-arrow {
+    0%, 20%, 50%, 80%, 100% { .transform(translate(-50%, 0)) }
+    40% { .transform(translate(-50%, -7.5px)) }
+    60%{ .transform(translate(-50%, -2.5px)) }
+}
+
+@keyframes bounce-arrow {
+    0%, 20%, 50%, 80%, 100% { .transform(translate(-50%, 0)) }
+    40% { .transform(translate(-50%, -7.5px)) }
+    60%{ .transform(translate(-50%, -2.5px)) }
 }
 
 /* STYLES */
@@ -269,8 +294,7 @@ html, body {
                 display: inline-block; 
                 color: @text-accent;
 
-                animation: blink 1s infinite;
-
+                .animation(blink 1s infinite);
             }
         }
 
@@ -524,6 +548,28 @@ html, body {
         &.slide-three {
             background: @primary-two;
 
+            .projects-page {
+                position: relative;
+                min-height: 100%;                
+
+                .down {
+                    display: none;
+                    position: absolute;
+                    bottom: 30px;
+                    color: @text-accent;
+                    font-size: 40px;
+                    left: 50%;
+                    
+                    .animation(bounce-arrow 2s infinite);
+
+                    cursor: pointer;
+
+                    @media (min-width: 1250px) {
+                        display: block;
+                    }
+                }
+            }
+
             .projects-container {
                 max-width: 1238px;
                 margin: 0 auto;
@@ -535,9 +581,10 @@ html, body {
 
                 @media(min-width: 1250px) {
                     padding: 48px 64px;
-                    position: relative;
+                    position: absolute;
                     top: 50%;
-                    .transform(translateY(-50%));
+                    left: 50%;
+                    .transform(translate(-50%, -50%));
                 }                
 
                 .lines {
@@ -663,6 +710,57 @@ html, body {
                             font-size: 18px;
                         }
                     }                    
+                }
+            }
+
+            .clients-page {
+                @media (min-width: 1250px) {                    
+                    min-height: 100%;
+                }
+            }
+
+            .clients-container {
+                padding: 80px;
+
+                .clients {
+                    display: table;
+                    width: 100%;
+
+                    .col {
+                        text-align: center;
+
+                        @media(min-width: 1250px) {
+                            display: table-cell;
+                            width: 25%;
+                            vertical-align: top;                      
+                            padding: 0 15px;
+
+                            text-align: left;
+                        }
+
+                        .group {
+                            margin-bottom: 50px;
+
+                            .title {
+                                font-size: 26px;
+                                color: @primary-one;
+                                margin-bottom: 20px;
+                            }
+
+                            .item {
+                                margin-bottom: 5px;
+
+                                > a {                                    
+                                    color: @text-accent;
+                                    text-decoration: none;
+                                
+                                    &:hover {
+                                        color: @primary-one;
+                                    }
+                                }
+                            }
+                        }                        
+                    }
                 }
             }
         }

@@ -1,4 +1,5 @@
-﻿$(function () {
+﻿var json;
+$(function () {
     var boCat = $('.bo img'),
         loCat = $('.lo img'),
         boOpen = $('.bo .text, .bo .text-mobile'),
@@ -365,6 +366,12 @@
         });
     };
 
+    $('.slide-three .down').on('click', function() {
+        $('.slide-three').animate({
+            scrollTop: $('.clients-page').offset().top
+        }, 1000);
+    });
+
     /* TYPEWRITER */
     var str = '<div class="title">'
         + '    <span class="marked underline we">We</span> make stuff'
@@ -429,14 +436,15 @@
 
     /* LOAD DATA */
     $.getJSON('data/data.json', function (data) {
+        json = data;
+
         $('.bo-desc .title').html(data['section-2']['bo']['title']);
         $('.bo-desc .text').html(data['section-2']['bo']['text']);
 
         $('.lo-desc .title').html(data['section-2']['lo']['title']);
         $('.lo-desc .text').html(data['section-2']['lo']['text']);
 
-        // http://dimsemenov.com/plugins/magnific-popup/ for the gallery
-
+        // projects
         for (var i = 0; i < data['section-3']['projects'].length && i < 6; i++) {
             var project = data['section-3']['projects'][i];
             var projectDom = $(''
@@ -469,6 +477,61 @@
         }
         $('<div class="clean"></div>').appendTo($('.slide-three .projects'));
 
+        // clients
+        var clientsCols = $('.slide-three .clients .col');
+        var clientsGroups = {};
+        var groupsCount = 0;
+
+        for (var i = 0; i < data['section-3']['clients'].length; i++) {
+            var client = data['section-3']['clients'][i];
+            var firstLetter = client.title[0].toUpperCase();
+
+            if (!clientsGroups.hasOwnProperty(firstLetter)) {
+                clientsGroups[firstLetter] = [];
+                groupsCount++;
+            }
+
+            clientsGroups[firstLetter].push(client);
+        }
+
+        var colsTotal = clientsCols.length;
+        var colsIter = 0;
+        var inCol = Math.floor(groupsCount / colsTotal);
+        var inColR = groupsCount % colsTotal;
+        groupsCount = 0;
+        
+        for (var groupName in clientsGroups) {
+            if (!clientsGroups.hasOwnProperty(groupName)) continue;
+            
+            var groupDom = $(''
+                + '<div class="group">'
+                + '    <div class="title"></div>'
+                + '</div>');
+
+            groupDom.find('.title').html(groupName);
+
+            for (var i = 0; i < clientsGroups[groupName].length; i++) {
+                var client = clientsGroups[groupName][i];
+                var clientDom = $('<div class="item"><a></a></div>');
+
+                clientDom.find('a')
+                    .attr('href', client.url)
+                    .html(client.title);
+
+                groupDom.append(clientDom);
+            }
+
+            $(clientsCols[0]).append(groupDom);
+            groupsCount++;
+
+            if ((groupsCount % inCol === 0 && colsIter >= inColR)
+                || (groupsCount % (inCol + 1) === 0)) {
+                clientsCols = clientsCols.splice(1);
+                colsIter++;
+            }
+        }
+
+        // fruits
         for (var i = 0; i < data['section-4']['projects'].length; i++) {
             var project = data['section-4']['projects'][i];
             var projectDom = $(''

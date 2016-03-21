@@ -93,6 +93,114 @@
                     { "src": "imgs/projects/fruit-squash/fruit-squash-2.jpg" }
                 ]
             }
+        ],
+
+        "clients": [
+            {
+                "title": "Apliton",
+                "url": "#"
+            },
+            {
+                "title": "Apliton",
+                "url": "#"
+            },
+            {
+                "title": "Apliton",
+                "url": "#"
+            },
+            {
+                "title": "Apliton",
+                "url": "#"
+            },
+
+            {
+                "title": "Broadcom",
+                "url": "#"
+            },
+            {
+                "title": "Bombardier",
+                "url": "#"
+            },
+            {
+                "title": "Broadcom",
+                "url": "#"
+            },
+            {
+                "title": "Bombardier",
+                "url": "#"
+            },
+            {
+                "title": "Broadcom",
+                "url": "#"
+            },
+            {
+                "title": "Bombardier",
+                "url": "#"
+            },
+
+            {
+                "title": "Caisses Desjardins du Québec",
+                "url": "#"
+            },
+            {
+                "title": "Casio",
+                "url": "#"
+            },
+            {
+                "title": "Casio",
+                "url": "#"
+            },
+
+            {
+                "title": "EIO Coalition",
+                "url": "#"
+            },
+            {
+                "title": "EnVu",
+                "url": "#"
+            },
+            {
+                "title": "EIO Coalition",
+                "url": "#"
+            },
+            {
+                "title": "EnVu",
+                "url": "#"
+            },
+
+            {
+                "title": "Google",
+                "url": "#"
+            },
+            {
+                "title": "Google",
+                "url": "#"
+            },
+            {
+                "title": "Google",
+                "url": "#"
+            },
+            {
+                "title": "Google",
+                "url": "#"
+            },
+            {
+                "title": "Google",
+                "url": "#"
+            },
+
+            {
+                "title": "ZyXEL",
+                "url": "#"
+            },
+            {
+                "title": "ZyXEL",
+                "url": "#"
+            },
+            {
+                "title": "ZyXEL",
+                "url": "#"
+            }
         ]
     },
 
