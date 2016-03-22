@@ -207,13 +207,23 @@
     "section-4": {
         "projects": [
             {
-                "logo": "imgs/fruit-1.png",
-                "title": "Fruit One",
+                "logo": "imgs/fruits/fruit-1.png",
+                "title": "Fruit 1",
                 "url": "https://google.com/"
             },
             {
-                "logo": "imgs/fruit-2.png",
-                "title": "Fruit Two",
+                "logo": "imgs/fruits/fruit-2.png",
+                "title": "Fruit 2",
+                "url": "https://google.com/"
+            },
+            {
+                "logo": "imgs/fruits/fruit-3.png",
+                "title": "Fruit 3",
+                "url": "https://google.com/"
+            },
+            {
+                "logo": "imgs/fruits/fruit-4.png",
+                "title": "Fruit 4",
                 "url": "https://google.com/"
             }
         ]
