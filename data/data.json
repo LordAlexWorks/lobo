@@ -205,24 +205,28 @@
     },
 
     "section-4": {
+        "main-project": {
+             "logo": "imgs/fruits/fruit-1.png",
+             "url": "https://google.com/"
+        },
         "projects": [
             {
-                "logo": "imgs/fruits/fruit-1.png",
+                "logo": "imgs/fruits/fruit-2.png",
                 "title": "Fruit 1",
                 "url": "https://google.com/"
             },
             {
-                "logo": "imgs/fruits/fruit-2.png",
+                "logo": "imgs/fruits/fruit-3.png",
                 "title": "Fruit 2",
                 "url": "https://google.com/"
             },
             {
-                "logo": "imgs/fruits/fruit-3.png",
+                "logo": "imgs/fruits/fruit-4.png",
                 "title": "Fruit 3",
                 "url": "https://google.com/"
             },
             {
-                "logo": "imgs/fruits/fruit-4.png",
+                "logo": "imgs/fruits/fruit-5.png",
                 "title": "Fruit 4",
                 "url": "https://google.com/"
             }

@@ -530,6 +530,13 @@ $(function () {
             $('.slide-four .fruits').append(projectDom);
         }
         $('<div class="clean"></div>').appendTo($('.slide-four .fruits'));
+
+        var mainProjectDom = $('<a><img></a>');
+
+        mainProjectDom.attr('href', data['section-4']['main-project'].url);
+        mainProjectDom.find('img').attr('src', data['section-4']['main-project'].logo);
+
+        $('.slide-four .main-fruit').append(mainProjectDom);
     });
 });
 
