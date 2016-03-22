@@ -773,6 +773,24 @@ body {
     min-height: 100%;
   }
 }
+.slides-container > .slide.slide-three .clients-page .up {
+  display: none;
+  position: absolute;
+  top: 30px;
+  color: #fff;
+  font-size: 40px;
+  left: 50%;
+  -moz-animation: bounce-arrow 2s infinite;
+  -o-animation: bounce-arrow 2s infinite;
+  -webkit-animation: bounce-arrow 2s infinite;
+  animation: bounce-arrow 2s infinite;
+  cursor: pointer;
+}
+@media (min-width: 1250px) {
+  .slides-container > .slide.slide-three .clients-page .up {
+    display: block;
+  }
+}
 .slides-container > .slide.slide-three .clients-container {
   position: absolute;
   padding: 80px;

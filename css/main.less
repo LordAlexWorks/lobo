@@ -719,6 +719,23 @@ html, body {
                 @media (min-width: 1250px) {                    
                     min-height: 100%;
                 }
+
+                .up {
+                    display: none;
+                    position: absolute;
+                    top: 30px;
+                    color: @text-accent;
+                    font-size: 40px;
+                    left: 50%;
+                    
+                    .animation(bounce-arrow 2s infinite);
+
+                    cursor: pointer;
+
+                    @media (min-width: 1250px) {
+                        display: block;
+                    }
+                }
             }
 
             .clients-container {
