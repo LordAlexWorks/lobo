@@ -841,98 +841,155 @@ body {
 .slides-container > .slide.slide-four {
   background: #e42e2e;
   position: relative;
+  /*.content-container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 50px 15px;
+
+                .content {
+                    @media(min-width: 720px) {
+                        position: absolute;
+                        top: 50%;
+                        .transform(translateY(-50%));
+                    }
+                }
+                
+                .text {
+                    color: #fff;
+                    font-size: 50px;
+                    text-align: center;
+
+                    padding-top: 30px;  
+                    
+                    @media(min-width: 720px) {
+                        padding-top: 0;
+                        padding-left: 50px;
+                        display: inline-block;
+
+                        vertical-align: top;
+                        line-height: 120px;
+                    }
+
+                    @media(min-width: 1024px) {
+                        padding-left: 120px;
+                    }
+                }                
+
+                .fruits {
+                    text-align: center;
+
+                    @media(min-width: 720px) {
+                        display: inline-block;
+                    }
+                }
+
+                .fruit {
+                    display: inline-block;
+                    height: 110px;
+                    margin-right: 60px;
+
+                    &.last {
+                        margin-right: 0;
+                    }
+                    
+                    a {                        
+                        text-decoration: none;
+                    }
+
+                    .title {
+                        position: relative;
+                        top: 10px;
+
+                        font-size: 18px;
+                        color: #fff;
+                        text-decoration: none;
+                    }       
+
+                    &:hover {
+                        .title {
+                            color: @primary-two;
+                        }                        
+                    }
+                }
+
+                .fruit-1 {
+                    margin-right: 50px;
+
+                    @media(min-width: 1024px) {
+                        margin-right: 70px;
+                    }
+                }
+
+                .fruit-2 {
+                    position: relative;
+                    
+                    > img {
+                        position: relative;
+                        top: 8px;
+                    }
+                }
+
+                .fruit, .text {
+                    opacity: 0;
+                    .transition(opacity ease 1s);
+
+                    &.fade-in {
+                        opacity: 1;
+                    }                    
+                }
+            }*/
 }
 .slides-container > .slide.slide-four .content-container {
-  max-width: 600px;
+  width: 180px;
   margin: 0 auto;
-  padding: 50px 15px;
 }
 @media (min-width: 720px) {
-  .slides-container > .slide.slide-four .content-container .content {
-    position: absolute;
-    top: 50%;
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-}
-.slides-container > .slide.slide-four .content-container .text {
-  color: #fff;
-  font-size: 50px;
-  text-align: center;
-  padding-top: 30px;
-}
-@media (min-width: 720px) {
-  .slides-container > .slide.slide-four .content-container .text {
-    padding-top: 0;
-    padding-left: 50px;
-    display: inline-block;
-    vertical-align: top;
-    line-height: 120px;
+  .slides-container > .slide.slide-four .content-container {
+    width: 400px;
   }
 }
 @media (min-width: 1024px) {
-  .slides-container > .slide.slide-four .content-container .text {
-    padding-left: 120px;
+  .slides-container > .slide.slide-four .content-container {
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
-.slides-container > .slide.slide-four .content-container .fruits {
+.slides-container > .slide.slide-four .content {
   text-align: center;
 }
+.slides-container > .slide.slide-four .content .fruit {
+  margin-bottom: 20px;
+}
 @media (min-width: 720px) {
-  .slides-container > .slide.slide-four .content-container .fruits {
+  .slides-container > .slide.slide-four .content .fruit {
+    width: 180px;
     display: inline-block;
+    margin: 20px 10px;
   }
 }
-.slides-container > .slide.slide-four .content-container .fruit {
-  display: inline-block;
-  height: 110px;
-  margin-right: 60px;
+@media (min-width: 1024px) {
+  .slides-container > .slide.slide-four .content .fruit {
+    margin: 0 10px;
+  }
 }
-.slides-container > .slide.slide-four .content-container .fruit.last {
-  margin-right: 0;
-}
-.slides-container > .slide.slide-four .content-container .fruit a {
+.slides-container > .slide.slide-four .content .fruit a {
   text-decoration: none;
 }
-.slides-container > .slide.slide-four .content-container .fruit .title {
+.slides-container > .slide.slide-four .content .fruit .title {
   position: relative;
   top: 10px;
   font-size: 18px;
   color: #fff;
-  text-decoration: none;
 }
-.slides-container > .slide.slide-four .content-container .fruit:hover .title {
+.slides-container > .slide.slide-four .content .fruit .title:hover {
   color: #ffc800;
-}
-.slides-container > .slide.slide-four .content-container .fruit-1 {
-  margin-right: 50px;
-}
-@media (min-width: 1024px) {
-  .slides-container > .slide.slide-four .content-container .fruit-1 {
-    margin-right: 70px;
-  }
-}
-.slides-container > .slide.slide-four .content-container .fruit-2 {
-  position: relative;
-}
-.slides-container > .slide.slide-four .content-container .fruit-2 > img {
-  position: relative;
-  top: 8px;
-}
-.slides-container > .slide.slide-four .content-container .fruit,
-.slides-container > .slide.slide-four .content-container .text {
-  opacity: 0;
-  -moz-transition: opacity ease 1s;
-  -o-transition: opacity ease 1s;
-  -webkit-transition: opacity ease 1s;
-  transition: opacity ease 1s;
-}
-.slides-container > .slide.slide-four .content-container .fruit.fade-in,
-.slides-container > .slide.slide-four .content-container .text.fade-in {
-  opacity: 1;
 }
 /* SLIDESHOW */
 .mfp-bg {

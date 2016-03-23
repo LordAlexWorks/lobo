@@ -561,7 +561,7 @@ $(function () {
         }
         $('<div class="clean"></div>').appendTo($('.slide-four .fruits'));
 
-        var mainProjectDom = $('<a><img></a>');
+        var mainProjectDom = $('<a target="_blank"><img></a>');
         
         mainProjectDom.attr('href', data['section-4']['main-project'].url);
         mainProjectDom.find('img').attr('src', data['section-4']['main-project'].logo);
