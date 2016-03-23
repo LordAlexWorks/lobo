@@ -311,7 +311,11 @@ $(function () {
             usAnimated = true;
 
             setTimeout(function () {
-                fruitsFadeId($('.fruits .fruit'));
+                $('.main-fruit').addClass('fade-in');
+
+                setTimeout(function () {
+                    fruitsFadeId($('.fruits .fruit'));
+                }, 900);
             }, animTime);
         }
     };

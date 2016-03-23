@@ -992,6 +992,18 @@ body {
   top: 10px;
   font-size: 18px;
 }
+.slides-container > .slide.slide-four .content .fruit,
+.slides-container > .slide.slide-four .content .main-fruit {
+  opacity: 0;
+  -moz-transition: opacity ease 1s;
+  -o-transition: opacity ease 1s;
+  -webkit-transition: opacity ease 1s;
+  transition: opacity ease 1s;
+}
+.slides-container > .slide.slide-four .content .fruit.fade-in,
+.slides-container > .slide.slide-four .content .main-fruit.fade-in {
+  opacity: 1;
+}
 /* SLIDESHOW */
 .mfp-bg {
   opacity: 0;

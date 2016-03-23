@@ -843,6 +843,15 @@ html, body {
                         font-size: 18px;
                     }
                 }
+
+                .fruit, .main-fruit {
+                    opacity: 0;
+                    .transition(opacity ease 1s);
+
+                    &.fade-in {
+                        opacity: 1;
+                    }                    
+                }
             }
 
             /*.content-container {
