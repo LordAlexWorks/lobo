@@ -1,6 +1,4 @@
-﻿'use strict';
-
-var json;
+﻿var json;
 $(function () {
     var boCat = $('.bo img'),
         loCat = $('.lo img'),
@@ -31,31 +29,30 @@ $(function () {
 
     var cats = [boCat, loCat, $('.bo .text'), $('.lo .text')];
 
-    $(cats).each(function (i, e) {
-        e.addClass('invisible');
-    });
+    $(cats).each(function (i, e) { e.addClass('invisible'); });
 
-    var animateCircle = function animateCircle(circleSelector) {
+    var animateCircle = function (circleSelector) {
         var val = 0;
         var $circle = $(circleSelector + ' circle');
 
-        var draw = function draw() {
+        var draw = function () {
             var r = $circle.attr('r');
             var c = Math.PI * (r * 2);
-            var pct = (100 - val) / 100 * c * -1;
+            var pct = ((100 - val) / 100) * c * -1;
 
             $circle.css({ strokeDashoffset: pct });
 
             val++;
-            if (val < 100) setTimeout(draw, 10);else {
+            if (val < 100) setTimeout(draw, 10);
+            else {
                 $circle.css({ strokeDashoffset: 0 });
             }
-        };
+        }
 
         draw();
     };
 
-    var catsFadeIn = function catsFadeIn(index) {
+    var catsFadeIn = function (index) {
         if (cats.length === index) {
             cats = [];
             return;
@@ -68,7 +65,8 @@ $(function () {
             setTimeout(function () {
                 animateCircle('.bo .progress-circle');
             }, 1700);
-        } else if (index === 3) {
+        }
+        else if (index === 3) {
             setTimeout(function () {
                 animateCircle('.lo .progress-circle');
             }, 1700);
@@ -79,7 +77,7 @@ $(function () {
         }, 1500);
     };
 
-    var Animation = function Animation(element, options) {
+    var Animation = function (element, options) {
         var self = this;
 
         self.target = element;
@@ -140,7 +138,7 @@ $(function () {
         time: 50
     });
 
-    var projectsVlineDraw = function projectsVlineDraw(line) {
+    var projectsVlineDraw = function (line) {
         var currentY = parseInt(line.attr('y2'));
 
         if (currentY >= 500) {
@@ -152,9 +150,9 @@ $(function () {
         setTimeout(function () {
             projectsVlineDraw(line);
         }, 10);
-    };
+    }
 
-    var projectsHlineDraw = function projectsHlineDraw(line) {
+    var projectsHlineDraw = function (line) {
         var currentX = parseInt(line.attr('x2'));
 
         if (currentX >= 1110) {
@@ -170,7 +168,7 @@ $(function () {
         }, 10);
     };
 
-    var projectsFadeIn = function projectsFadeIn(projects) {
+    var projectsFadeIn = function (projects) {
         if (projects.length === 0) {
             projectsHlineDraw($($('.projects-container .lines line')[0]));
             return;
@@ -186,7 +184,7 @@ $(function () {
         }, 900);
     };
 
-    var fruitsFadeId = function fruitsFadeId(fruits) {
+    var fruitsFadeId = function (fruits) {
         if (fruits.length === 0) {
             $('.slide-four .text').addClass('fade-in');
             return;
@@ -201,7 +199,11 @@ $(function () {
     };
 
     /* GRADIENT */
-    var colors = new Array([255, 0, 0], [255, 165, 0], [255, 255, 0], [128, 0, 128]);
+    var colors = new Array(
+      [255, 0, 0],
+      [255, 165, 0],
+      [255, 255, 0],
+      [128, 0, 128]);
 
     var step = 0;
     var colorIndices = [0, 1, 2, 3];
@@ -229,7 +231,9 @@ $(function () {
         var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
         var color2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
 
-        $('.slide-one').css({ background: '-webkit-gradient(linear, left top, right top, from(' + color1 + '), to(' + color2 + '))' }).css({ background: '-moz-linear-gradient(left, ' + color1 + ' 0%, ' + color2 + ' 100%)' });
+        $('.slide-one')
+            .css({ background: '-webkit-gradient(linear, left top, right top, from(' + color1 + '), to(' + color2 + '))' })
+            .css({ background: '-moz-linear-gradient(left, ' + color1 + ' 0%, ' + color2 + ' 100%)' });
 
         step += gradientSpeed;
 
@@ -245,27 +249,25 @@ $(function () {
         gradientTimeout = setTimeout(updateGradient, 50);
     }
 
+
     /* SLIDES */
     var slides = $('.slide');
     var activeSlide;
     var overflowTimer = undefined;
 
     var homeSlideIndex = 0;
-    var weSlideIndex = 1,
-        weAnimated = false;
-    var themSlideIndex = 2,
-        themAnimated = false;
-    var usSlideIndex = 3,
-        usAnimated = false;
+    var weSlideIndex = 1, weAnimated = false;
+    var themSlideIndex = 2, themAnimated = false;
+    var usSlideIndex = 3, usAnimated = false;
 
-    var initSlider = function initSlider() {
+    var initSlider = function () {
         activeSlide = 0;
         $('.left-arrow').hide();
 
         activateSlide(0);
     };
 
-    var activateSlide = function activateSlide(animTime) {
+    var activateSlide = function (animTime) {
         if (animTime === undefined) animTime = 2000;
 
         for (var i = 0; i < slides.length; i++) {
@@ -297,13 +299,15 @@ $(function () {
             setTimeout(function () {
                 catsFadeIn(0);
             }, animTime);
-        } else if (activeSlide === themSlideIndex && !themAnimated) {
+        }
+        else if (activeSlide === themSlideIndex && !themAnimated) {
             themAnimated = true;
 
             setTimeout(function () {
                 projectsFadeIn($('.projects .project'));
             }, animTime);
-        } else if (activeSlide === usSlideIndex && !usAnimated) {
+        }
+        else if (activeSlide === usSlideIndex && !usAnimated) {
             usAnimated = true;
 
             setTimeout(function () {
@@ -312,20 +316,22 @@ $(function () {
         }
     };
 
-    var checkArrows = function checkArrows() {
-        if (activeSlide === slides.length - 1) $('.right-arrow').hide();else $('.right-arrow').show();
+    var checkArrows = function () {
+        if (activeSlide === slides.length - 1) $('.right-arrow').hide();
+        else $('.right-arrow').show();
 
-        if (activeSlide > 0) $('.left-arrow').show();else $('.left-arrow').hide();
+        if (activeSlide > 0) $('.left-arrow').show();
+        else $('.left-arrow').hide();
     };
 
-    var nextSlide = function nextSlide() {
+    var nextSlide = function () {
         activeSlide++;
 
         checkArrows();
         activateSlide();
     };
 
-    var prevSlide = function prevSlide() {
+    var prevSlide = function () {
         activeSlide--;
 
         checkArrows();
@@ -337,7 +343,7 @@ $(function () {
 
     initSlider();
 
-    var markedHandlers = function markedHandlers() {
+    var markedHandlers = function () {
         $('.marked.we').on('click', function () {
             activeSlide = weSlideIndex;
 
@@ -366,15 +372,24 @@ $(function () {
         }, 1000);
     });
 
-    $('.slide-three .up').on('click', function () {
-        console.log(1);
+    $('.slide-three .up').on('click', function() {
         $('.slide-three').animate({
             scrollTop: 0
         }, 1000);
     });
 
     /* TYPEWRITER */
-    var str = '<div class="title">' + '    <span class="marked underline we">We</span> make stuff' + '</div>' + '<br>' + '<div class="title">' + '    for <span class="marked underline them">them</span>, <a href="mailto:info@lobo.io" class="marked you">y<span class="underline">ou</span></a> and <span class="marked underline us">us</span>.' + '</div>' + '<br>' + '<div class="text">' + '    Lobo are a hard-working multi-disiplinary angency deliviring high quality projects.' + '</div>',
+    var str = '<div class="title">'
+        + '    <span class="marked underline we">We</span> make stuff'
+        + '</div>'
+        + '<br>'
+        + '<div class="title">'
+        + '    for <span class="marked underline them">them</span>, <a href="mailto:info@lobo.io" class="marked you">y<span class="underline">ou</span></a> and <span class="marked underline us">us</span>.'
+        + '</div>'
+        + '<br>'
+        + '<div class="text">'
+        + '    Lobo are a hard-working multi-disiplinary angency deliviring high quality projects.'
+        + '</div>',
         textCounter = 0,
         isTag,
         isSpan,
@@ -383,50 +398,44 @@ $(function () {
 
     var content = $('.slide-one .content');
 
-    var type = function type() {
-        var _again = true;
+    var type = function () {
+        text = str.slice(0, ++textCounter);
+        var slice = str.slice(textCounter);
 
-        _function: while (_again) {
-            _again = false;
+        if (text === str) {
+            markedHandlers();
+            return;
+        }
 
-            text = str.slice(0, ++textCounter);
-            var slice = str.slice(textCounter);
+        var char = text.slice(-1);
+        if (char === '<') {
+            isTag = true;
 
-            if (text === str) {
-                markedHandlers();
+            if (slice.indexOf('span') === 0) isSpan = true;
+            else if (slice.indexOf('/span') === 0) {
+                isSpan = false;
+                setTimeout(type, 1000);
+
                 return;
             }
-
-            var char = text.slice(-1);
-            if (char === '<') {
-                isTag = true;
-
-                if (slice.indexOf('span') === 0) isSpan = true;else if (slice.indexOf('/span') === 0) {
-                    isSpan = false;
-                    setTimeout(type, 1000);
-
-                    return;
-                }
-            } else if (char === '>') isTag = false;else if (slice.indexOf('Lobo ') === 0) {
-                faster = true;
-            }
-
-            if (isTag || char === ' ') {
-                _again = true;
-                slice = char = undefined;
-                continue _function;
-            }
-
-            if (isSpan) {
-                text += '</span><div class="slash">|</div>';
-            } else {
-                text += '<div class="slash">|</div>';
-            }
-
-            content.html(text);
-
-            if (faster) setTimeout(type, 30);else setTimeout(type, 150);
         }
+        else if (char === '>') isTag = false;
+        else if (slice.indexOf('Lobo ') === 0) {
+            faster = true;
+        }
+
+        if (isTag || char === ' ') return type();
+
+        if (isSpan) {
+            text += '</span><div class="slash">|</div>';
+        } else {
+            text += '<div class="slash">|</div>';
+        }
+
+        content.html(text);
+
+        if (faster) setTimeout(type, 30);
+        else setTimeout(type, 150);
     };
 
     type();
@@ -444,7 +453,15 @@ $(function () {
         // projects
         for (var i = 0; i < data['section-3']['projects'].length && i < 6; i++) {
             var project = data['section-3']['projects'][i];
-            var projectDom = $('' + '<div class="project">' + '    <div class="info">' + '        <div class="title"></div>' + '        <div class="desc"></div>' + '    </div>' + '    <div class="link"><i class="fa fa-eye"></i></div>' + '</div>');
+            var projectDom = $(''
+                + '<div class="project">'
+                + '    <div class="info">'
+                + '        <div class="title"></div>'
+                + '        <div class="desc"></div>'
+                + '    </div>'
+                + '    <div class="link"><i class="fa fa-eye"></i></div>'
+                + '</div>'
+                );
 
             projectDom.find('.title').html(project['title']);
             projectDom.find('.desc').html(project['desc']);
@@ -492,7 +509,10 @@ $(function () {
         for (var groupName in clientsGroups) {
             if (!clientsGroups.hasOwnProperty(groupName)) continue;
 
-            var groupDom = $('' + '<div class="group">' + '    <div class="title"></div>' + '</div>');
+            var groupDom = $(''
+                + '<div class="group">'
+                + '    <div class="title"></div>'
+                + '</div>');
 
             groupDom.find('.title').html(groupName);
 
@@ -500,7 +520,9 @@ $(function () {
                 var client = clientsGroups[groupName][i];
                 var clientDom = $('<div class="item"><a></a></div>');
 
-                clientDom.find('a').attr('href', client.url).html(client.title);
+                clientDom.find('a')
+                    .attr('href', client.url)
+                    .html(client.title);
 
                 groupDom.append(clientDom);
             }
@@ -508,7 +530,8 @@ $(function () {
             $(clientsCols[0]).append(groupDom);
             groupsCount++;
 
-            if (groupsCount % inCol === 0 && colsIter >= inColR || groupsCount % (inCol + 1) === 0) {
+            if ((groupsCount % inCol === 0 && colsIter >= inColR)
+                || (groupsCount % (inCol + 1) === 0)) {
                 clientsCols = clientsCols.splice(1);
                 colsIter++;
             }
@@ -517,7 +540,14 @@ $(function () {
         // fruits
         for (var i = 0; i < data['section-4']['projects'].length; i++) {
             var project = data['section-4']['projects'][i];
-            var projectDom = $('' + '<div class="fruit">' + '    <a target="_blank">' + '        <img />' + '        <div class="title"></div>' + '    </a>' + '</div>');
+            var projectDom = $(''
+                + '<div class="fruit">'
+                + '    <a target="_blank">'
+                + '        <img />'
+                + '        <div class="title"></div>'
+                + '    </a>'
+                + '</div>'
+                );
 
             projectDom.find('a').attr('href', project['url']);
             projectDom.find('img').attr('src', project['logo']);
@@ -532,11 +562,10 @@ $(function () {
         $('<div class="clean"></div>').appendTo($('.slide-four .fruits'));
 
         var mainProjectDom = $('<a><img></a>');
-
+        
         mainProjectDom.attr('href', data['section-4']['main-project'].url);
         mainProjectDom.find('img').attr('src', data['section-4']['main-project'].logo);
-
+        
         $('.slide-four .main-fruit').append(mainProjectDom);
     });
 });
-
