@@ -759,6 +759,7 @@ body {
 .slides-container > .slide.slide-three .projects-container .project .desc {
   font-size: 16px;
   color: #fff;
+  text-align: justify;
 }
 @media (min-width: 720px) {
   .slides-container > .slide.slide-three .projects-container .project .desc {
