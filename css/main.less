@@ -814,14 +814,6 @@ html, body {
             .content {
                 text-align: center;
 
-                .main-fruit {
-
-                }
-
-                .fruits {
-                    
-                }
-
                 .fruit {
                     margin-bottom: 20px;
 
@@ -836,18 +828,18 @@ html, body {
                     }
 
                     a {                        
-                        text-decoration: none;
+                        text-decoration: none;                        
+                        color: @text-accent;                        
+
+                        &:hover {
+                            color: @primary-two;
+                        }
                     }
 
                     .title {                        
                         position: relative;
                         top: 10px;
                         font-size: 18px;
-                        color: @text-accent;
-
-                        &:hover {
-                            color: @primary-two;
-                        }
                     }
                 }
             }

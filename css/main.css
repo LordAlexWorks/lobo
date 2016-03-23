@@ -981,15 +981,15 @@ body {
 }
 .slides-container > .slide.slide-four .content .fruit a {
   text-decoration: none;
+  color: #fff;
+}
+.slides-container > .slide.slide-four .content .fruit a:hover {
+  color: #ffc800;
 }
 .slides-container > .slide.slide-four .content .fruit .title {
   position: relative;
   top: 10px;
   font-size: 18px;
-  color: #fff;
-}
-.slides-container > .slide.slide-four .content .fruit .title:hover {
-  color: #ffc800;
 }
 /* SLIDESHOW */
 .mfp-bg {
