@@ -467,8 +467,21 @@ $(function () {
                 + '</div>'
                 );
 
+            var cuttedDesc;
+
+            if (project['desc'].length > 300) {
+                cuttedDesc = project['desc'].substring(0, 300);
+                var lastIndexSpace = cuttedDesc.lastIndexOf(' ');
+
+                if (lastIndexSpace > 0) cuttedDesc = cuttedDesc.substring(0, lastIndexSpace);
+
+                cuttedDesc += '...';
+            } else {
+                cuttedDesc = project['desc'];
+            }
+
             projectDom.find('.title').html(project['title']);
-            projectDom.find('.desc').html(project['desc']);
+            projectDom.find('.desc').html(cuttedDesc);
 
             if (i === data['section-3']['projects'].length - 1) {
                 projectDom.addClass('last');
