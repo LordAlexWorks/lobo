@@ -97,138 +97,67 @@
 
         "clients": [
             {
-                "title": "Apliton",
-                "url": "#"
-            },
-            {
-                "title": "Apliton",
-                "url": "#"
-            },
-            {
-                "title": "Apliton",
-                "url": "#"
-            },
-            {
-                "title": "Apliton",
-                "url": "#"
+                "title": "Aptilon",
+                "url": "http://www.indegene.com"
             },
 
             {
                 "title": "Broadcom",
-                "url": "#"
-            },
-            {
-                "title": "Bombardier",
-                "url": "#"
-            },
-            {
-                "title": "Broadcom",
-                "url": "#"
-            },
-            {
-                "title": "Bombardier",
-                "url": "#"
-            },
-            {
-                "title": "Broadcom",
-                "url": "#"
-            },
-            {
-                "title": "Bombardier",
-                "url": "#"
+                "url": "https://www.broadcom.com"
             },
 
             {
                 "title": "Caisses Desjardins du Québec",
-                "url": "#"
-            },
-            {
-                "title": "Casio",
-                "url": "#"
-            },
-            {
-                "title": "Casio",
-                "url": "#"
+                "url": "https://www.desjardins.com/ca/"
             },
 
             {
                 "title": "EIO Coalition",
-                "url": "#"
+                "url": "http://www.eiocoalition.org/"
             },
             {
                 "title": "EnVu",
-                "url": "#"
+                "url": "http://www.envu.com"
             },
             {
-                "title": "EIO Coalition",
-                "url": "#"
+                "title": "FORCES.CA",
+                "url": "http://www.forces.ca"
             },
+            
             {
-                "title": "EnVu",
-                "url": "#"
-            },
-
-            {
-                "title": "Google",
-                "url": "#"
-            },
-            {
-                "title": "Google",
-                "url": "#"
-            },
-            {
-                "title": "Google",
-                "url": "#"
-            },
-            {
-                "title": "Google",
-                "url": "#"
-            },
-            {
-                "title": "Google",
-                "url": "#"
-            },
-
-            {
-                "title": "ZyXEL",
-                "url": "#"
-            },
-            {
-                "title": "ZyXEL",
-                "url": "#"
-            },
-            {
-                "title": "ZyXEL",
-                "url": "#"
+                "title": "Natural Resources Canada",
+                "url": "http://www.nrcan.gc.ca/home"
             }
+            
         ]
     },
 
     "section-4": {
         "main-project": {
              "logo": "imgs/fruits/fruit-1.png",
-             "url": "https://google.com/"
+             "title": "Papaye - Sign documents online.",
+             "url": "#"
         },
         "projects": [
             {
                 "logo": "imgs/fruits/fruit-2.png",
-                "title": "Fruit 1",
-                "url": "https://google.com/"
+                "title": "Papaye - Sign documents online.",
+                "url": "#"
             },
             {
                 "logo": "imgs/fruits/fruit-3.png",
-                "title": "Fruit 2",
-                "url": "https://google.com/"
+                "title": "Pitaya - Track Tasks ",
+                "url": "#"
             },
             {
                 "logo": "imgs/fruits/fruit-4.png",
-                "title": "Fruit 3",
-                "url": "https://google.com/"
+                "title": "Guayaba - Proximy commerce and loyalty platform",
+                "url": "#"
             },
             {
                 "logo": "imgs/fruits/fruit-5.png",
-                "title": "Fruit 4",
-                "url": "https://google.com/"
+                "title": "Jobo - Get Online payments",
+                "url": "#"
             }
         ]
     }

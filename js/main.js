@@ -1,4 +1,4 @@
-﻿var json;
+var json;
 $(function () {
     var boCat = $('.bo img'),
         loCat = $('.lo img'),
@@ -392,7 +392,7 @@ $(function () {
         + '</div>'
         + '<br>'
         + '<div class="text">'
-        + '    Lobo are a hard-working multi-disiplinary angency deliviring high quality projects.'
+        + '    LO.BO is a hard-working multi-disiplinary angency deliviring high quality projects.'
         + '</div>',
         textCounter = 0,
         isTag,
