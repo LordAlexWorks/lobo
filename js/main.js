@@ -13,7 +13,7 @@ $(function () {
         boDesc.addClass('open');
         loDesc.removeClass('open');
     });
-
+    
     loOpen.on('click', function () {
         boDesc.removeClass('open');
         loDesc.addClass('open');
