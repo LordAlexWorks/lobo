@@ -6,3 +6,4 @@ compileconfig.json
 compileconfig.json.defaults
 /.vscode
 /node_modules
+/.idea
