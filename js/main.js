@@ -392,7 +392,7 @@ $(function () {
         + '</div>'
         + '<br>'
         + '<div class="text">'
-        + '    LO.BO is a hard-working multi-disiplinary angency deliviring high quality projects.'
+        + '    LO.BO is a hard-working multi-disciplinary agency deliviring high quality projects.'
         + '</div>',
         textCounter = 0,
         isTag,
