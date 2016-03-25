@@ -199,7 +199,7 @@ $(function () {
     };
     
     var ahStarted = false;
-    var ahHeartbets = 6;
+    var ahHeartbets = 7;
     
     var animateHome = function() {
         $('.slide-one .logo-w').addClass('fade-in');
@@ -217,7 +217,7 @@ $(function () {
     };
     
     var logoHeartbeat = function (iteration) {   
-        if (iteration === ahHeartbets) {            
+        if (iteration === ahHeartbets - 2) {            
             fadeOutLogoY();
         }
         else if (iteration === ahHeartbets) {
@@ -232,7 +232,18 @@ $(function () {
     
     var fadeOutLogoY = function () {
         $('.slide-one .logo-y').removeClass('fade-in');
+        
+        setTimeout(function () {
+            $('.slide-one .logo-w, .slide-one .logo-y').hide();
+            type();
+        }, 1500);
     }
+    
+    var fadeInLogoS = function () {
+        $('.slide-one .logo-s').addClass('fade-in');
+        
+        setTimeout(updateGradient, 1500);  
+    };
 
     /* GRADIENT */
     var colors = new Array(
@@ -447,6 +458,7 @@ $(function () {
 
         if (text === str) {
             markedHandlers();
+            fadeInLogoS();
             return;
         }
 
