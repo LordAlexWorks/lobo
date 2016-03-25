@@ -13,7 +13,7 @@ $(function () {
         boDesc.addClass('open');
         loDesc.removeClass('open');
     });
-    
+
     loOpen.on('click', function () {
         boDesc.removeClass('open');
         loDesc.addClass('open');
@@ -197,52 +197,52 @@ $(function () {
             fruitsFadeId(fruits);
         }, 900);
     };
-    
+
     var ahStarted = false;
     var ahHeartbets = 7;
-    
+
     var animateHome = function() {
         $('.slide-one .logo-w').addClass('fade-in');
-        
+
         setTimeout(fadeInLogoY, 1000);
     };
-    
-    var fadeInLogoY = function () {        
+
+    var fadeInLogoY = function () {
         $('.slide-one .logo-y').addClass('fade-in');
         $('.slide-one .logo-w').removeClass('fade-in');
-        
+
         setTimeout(function () {
             logoHeartbeat(0);
         }, 1500);
     };
-    
-    var logoHeartbeat = function (iteration) {   
-        if (iteration === ahHeartbets - 2) {            
+
+    var logoHeartbeat = function (iteration) {
+        if (iteration === ahHeartbets - 2) {
             fadeOutLogoY();
         }
         else if (iteration === ahHeartbets) {
             return;
         }
         $('.slide-one .logo-y').toggleClass('heartbeat');
-        
+
         setTimeout(function () {
             logoHeartbeat(iteration + 1);
         }, 500);
     };
-    
+
     var fadeOutLogoY = function () {
         $('.slide-one .logo-y').removeClass('fade-in');
-        
+
         setTimeout(function () {
             $('.slide-one .logo-w, .slide-one .logo-y').hide();
             type();
         }, 1500);
     }
-    
+
     var fadeInLogoS = function () {
         $('.slide-one .logo-s').addClass('fade-in');
-        
-        setTimeout(updateGradient, 1500);  
+
+        setTimeout(updateGradient, 1500);
     };
 
     /* GRADIENT */
@@ -442,7 +442,7 @@ $(function () {
         + '</div>'
         + '<br>'
         + '<div class="text">'
-        + '    LO.BO is a hard-working multi-disciplinary agency deliviring high quality projects.'
+        + '    LO.BO is a hard-working multi-disciplinary agency delivering high quality projects.'
         + '</div>',
         textCounter = 0,
         isTag,
@@ -628,10 +628,10 @@ $(function () {
         $('<div class="clean"></div>').appendTo($('.slide-four .fruits'));
 
         var mainProjectDom = $('<a target="_blank"><img></a>');
-        
+
         mainProjectDom.attr('href', data['section-4']['main-project'].url);
         mainProjectDom.find('img').attr('src', data['section-4']['main-project'].logo);
-        
+
         $('.slide-four .main-fruit').append(mainProjectDom);
     });
 });
