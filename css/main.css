@@ -213,6 +213,57 @@ body {
   background: #e42e2e;
   color: #fff;
 }
+.slides-container > .slide.slide-one .logo-w,
+.slides-container > .slide.slide-one .logo-y,
+.slides-container > .slide.slide-one .logo-s {
+  opacity: 0;
+  -moz-transition: opacity 2s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
+  -o-transition: opacity 2s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
+  -webkit-transition: opacity 2s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
+  transition: opacity 2s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
+}
+.slides-container > .slide.slide-one .logo-w.fade-in,
+.slides-container > .slide.slide-one .logo-y.fade-in,
+.slides-container > .slide.slide-one .logo-s.fade-in {
+  opacity: 1;
+}
+.slides-container > .slide.slide-one .logo-w,
+.slides-container > .slide.slide-one .logo-y {
+  width: 175px;
+  height: 175px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.slides-container > .slide.slide-one .logo-w {
+  background-image: url('../imgs/logo-w.png');
+}
+.slides-container > .slide.slide-one .logo-y {
+  background-image: url('../imgs/logo-y.png');
+}
+.slides-container > .slide.slide-one .logo-y.heartbeat {
+  width: 190px;
+  height: 190px;
+}
+.slides-container > .slide.slide-one .logo-s {
+  width: 80px;
+  height: 80px;
+  background-image: url('../imgs/logo-y.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 5px;
+  left: 15px;
+}
 .slides-container > .slide.slide-one .content-container {
   max-width: 850px;
   height: 100%;

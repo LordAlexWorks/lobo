@@ -197,6 +197,42 @@ $(function () {
             fruitsFadeId(fruits);
         }, 900);
     };
+    
+    var ahStarted = false;
+    var ahHeartbets = 6;
+    
+    var animateHome = function() {
+        $('.slide-one .logo-w').addClass('fade-in');
+        
+        setTimeout(fadeInLogoY, 1000);
+    };
+    
+    var fadeInLogoY = function () {        
+        $('.slide-one .logo-y').addClass('fade-in');
+        $('.slide-one .logo-w').removeClass('fade-in');
+        
+        setTimeout(function () {
+            logoHeartbeat(0);
+        }, 1500);
+    };
+    
+    var logoHeartbeat = function (iteration) {   
+        if (iteration === ahHeartbets) {            
+            fadeOutLogoY();
+        }
+        else if (iteration === ahHeartbets) {
+            return;
+        }
+        $('.slide-one .logo-y').toggleClass('heartbeat');
+        
+        setTimeout(function () {
+            logoHeartbeat(iteration + 1);
+        }, 500);
+    };
+    
+    var fadeOutLogoY = function () {
+        $('.slide-one .logo-y').removeClass('fade-in');
+    }
 
     /* GRADIENT */
     var colors = new Array(
@@ -288,7 +324,10 @@ $(function () {
         }, animTime);
 
         if (activeSlide === homeSlideIndex) {
-            updateGradient();
+            if (!ahStarted) {
+                ahStarted = true;
+                setTimeout(animateHome, animTime);
+            }
         } else {
             clearTimeout(gradientTimeout);
         }
@@ -441,8 +480,6 @@ $(function () {
         if (faster) setTimeout(type, 30);
         else setTimeout(type, 150);
     };
-
-    type();
 
     /* LOAD DATA */
     $.getJSON('data/data.json', function (data) {
