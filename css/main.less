@@ -246,14 +246,34 @@ html, body {
             .logo-s {                
                 width: 80px;
                 height: 80px;
-                background-image: url('../imgs/logo-y.png');
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
                 
                 position: absolute;
                 top: 5px;
                 left: 15px;
+
+                .sy, .sw {
+                    width: 80px;
+                    height: 80px;
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+
+                .sy {
+                    background-image: url('../imgs/logo-y.png');
+                    z-index: 10;
+
+                    .animation(blink 3.5s infinite linear);
+                }
+
+                .sw {
+                    background-image: url('../imgs/logo-w.png');
+                }
             }
 
             .content-container {

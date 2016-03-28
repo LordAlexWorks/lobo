@@ -261,13 +261,31 @@ body {
 .slides-container > .slide.slide-one .logo-s {
   width: 80px;
   height: 80px;
-  background-image: url('../imgs/logo-y.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
   position: absolute;
   top: 5px;
   left: 15px;
+}
+.slides-container > .slide.slide-one .logo-s .sy,
+.slides-container > .slide.slide-one .logo-s .sw {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.slides-container > .slide.slide-one .logo-s .sy {
+  background-image: url('../imgs/logo-y.png');
+  z-index: 10;
+  -moz-animation: blink 3.5s infinite linear;
+  -o-animation: blink 3.5s infinite linear;
+  -webkit-animation: blink 3.5s infinite linear;
+  animation: blink 3.5s infinite linear;
+}
+.slides-container > .slide.slide-one .logo-s .sw {
+  background-image: url('../imgs/logo-w.png');
 }
 .slides-container > .slide.slide-one .content-container {
   max-width: 850px;
