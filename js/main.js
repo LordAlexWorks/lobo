@@ -477,7 +477,7 @@ $(function () {
             }
         }
         else if (char === '>') isTag = false;
-        else if (slice.indexOf('Lobo ') === 0) {
+        else if (slice.indexOf('LO.BO ') === 0) {
             faster = true;
         }
 
