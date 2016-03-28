@@ -613,6 +613,7 @@ $(function () {
                 + '    <a target="_blank">'
                 + '        <img />'
                 + '        <div class="title"></div>'
+                + '        <div class="tag"></div>'
                 + '    </a>'
                 + '</div>'
                 );
@@ -620,6 +621,7 @@ $(function () {
             projectDom.find('a').attr('href', project['url']);
             projectDom.find('img').attr('src', project['logo']);
             projectDom.find('.title').html(project['title']);
+            projectDom.find('.tag').html(project['tag']);
 
             if (i === data['section-4']['projects'].length - 1) {
                 projectDom.addClass('last');
