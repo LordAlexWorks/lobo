@@ -222,10 +222,10 @@ body {
 .slides-container > .slide.slide-one .logo-y,
 .slides-container > .slide.slide-one .logo-s {
   opacity: 0;
-  -moz-transition: opacity 2s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
-  -o-transition: opacity 2s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
-  -webkit-transition: opacity 2s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
-  transition: opacity 2s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
+  -moz-transition: opacity 2.5s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
+  -o-transition: opacity 2.5s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
+  -webkit-transition: opacity 2.5s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
+  transition: opacity 2.5s ease 0s, width 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s, height 1s cubic-bezier(0.4, -0.03, 0.27, 1.55) 0s;
 }
 .slides-container > .slide.slide-one .logo-w.fade-in,
 .slides-container > .slide.slide-one .logo-y.fade-in,

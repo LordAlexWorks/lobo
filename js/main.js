@@ -204,7 +204,7 @@ $(function () {
     var animateHome = function() {
         $('.slide-one .logo-w').addClass('fade-in');
 
-        setTimeout(fadeInLogoY, 1000);
+        setTimeout(fadeInLogoY, 1500);
     };
 
     var fadeInLogoY = function () {
@@ -213,7 +213,7 @@ $(function () {
 
         setTimeout(function () {
             logoHeartbeat(0);
-        }, 1500);
+        }, 2500);
     };
 
     var logoHeartbeat = function (iteration) {
