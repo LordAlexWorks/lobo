@@ -312,6 +312,8 @@ $(function () {
         $('.left-arrow').hide();
 
         activateSlide(0);
+
+        slides.addClass('loaded');
     };
 
     var activateSlide = function (animTime) {

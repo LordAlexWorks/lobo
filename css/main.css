@@ -202,14 +202,19 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
+  display: none;
+  position: absolute;
+  top: 0;
+}
+.slides-container > .slide.loaded {
+  display: block;
   -moz-transition: left 2s ease;
   -o-transition: left 2s ease;
   -webkit-transition: left 2s ease;
   transition: left 2s ease;
-  position: absolute;
-  top: 0;
 }
 .slides-container > .slide.slide-one {
+  display: block;
   background: #e42e2e;
   color: #fff;
 }
