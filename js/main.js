@@ -242,12 +242,14 @@ $(function () {
     var fadeInLogoS = function () {
         $('.slide-one .logo-s').addClass('fade-in');
 
-        setTimeout(updateGradient, 1500);
+        setTimeout(updateGradient, 500);
     };
 
     /* GRADIENT */
     var colors = new Array(
-      [255, 0, 0],
+      [228, 46, 46],
+      [228, 46, 46],
+      [228, 46, 46],
       [255, 165, 0],
       [255, 255, 0],
       [128, 0, 128]);
