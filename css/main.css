@@ -374,13 +374,6 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
-.slides-container > .slide.slide-one .title .marked:hover {
-  color: #E53988;
-}
-.slides-container > .slide.slide-one .title .marked:hover.underline,
-.slides-container > .slide.slide-one .title .marked:hover > .underline {
-  border-color: #E53988;
-}
 .slides-container > .slide.slide-one .text {
   display: inline-block;
   font-size: 26px;
