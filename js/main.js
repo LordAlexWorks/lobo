@@ -440,7 +440,7 @@ $(function () {
         + '</div>'
         + '<br>'
         + '<div class="title">'
-        + '    for <span class="marked underline them">them</span>, <a href="mailto:info@lobo.io" class="marked you">y<span class="underline">ou</span></a> and <span class="marked underline us">us</span>.'
+        + '    for <span class="marked underline them">them</span>, <a href="mailto:lordalex@lobo.studio" class="marked you">y<span class="underline">ou</span></a> and <span class="marked underline us">us</span>.'
         + '</div>'
         + '<br>'
         + '<div class="text">'
