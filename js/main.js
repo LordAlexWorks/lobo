@@ -242,7 +242,8 @@ $(function () {
     var fadeInLogoS = function () {
         $('.slide-one .logo-s').addClass('fade-in');
 
-        setTimeout(updateGradient, 500);
+        gradientTimeout = setTimeout(updateGradient, 500);
+        gradientStarted = true;
     };
 
     /* GRADIENT */
@@ -258,7 +259,7 @@ $(function () {
     var colorIndices = [0, 1, 2, 3];
     var gradientSpeed = 0.008;
 
-    var gradientTimeout;
+    var gradientTimeout, gradientStarted;
 
     function updateGradient() {
 
@@ -342,6 +343,9 @@ $(function () {
             if (!ahStarted) {
                 ahStarted = true;
                 setTimeout(animateHome, animTime);
+            }
+            if (gradientStarted) {
+                updateGradient();
             }
         } else {
             clearTimeout(gradientTimeout);
