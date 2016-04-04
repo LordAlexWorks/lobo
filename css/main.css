@@ -184,17 +184,6 @@ body {
     font-size: 30px;
   }
 }
-@media (min-width: 1920px) {
-  .right-arrow,
-  .left-arrow {
-    width: 80px;
-    height: 80px;
-    line-height: 84px;
-    font-size: 40px;
-    border-radius: 40px;
-    border-width: 3px;
-  }
-}
 .left-arrow {
   left: 4px;
 }
