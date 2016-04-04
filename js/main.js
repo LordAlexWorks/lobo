@@ -242,7 +242,7 @@ $(function () {
     var fadeInLogoS = function () {
         $('.slide-one .logo-s').addClass('fade-in');
 
-        gradientTimeout = setTimeout(updateGradient, 500);
+        //gradientTimeout = setTimeout(updateGradient, 500);
         gradientStarted = true;
     };
 
