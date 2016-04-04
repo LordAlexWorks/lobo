@@ -175,15 +175,6 @@ body {
     font-size: 22px;
   }
 }
-@media (min-width: 1280px) {
-  .right-arrow,
-  .left-arrow {
-    width: 60px;
-    height: 60px;
-    line-height: 62px;
-    font-size: 30px;
-  }
-}
 .left-arrow {
   left: 4px;
 }
