@@ -543,7 +543,6 @@ body {
   .slides-container > .slide.slide-one .logo-s {
     width: 80px;
     height: 80px;
-    top: 5px;
   }
   .slides-container > .slide.slide-one .logo-s .sy,
   .slides-container > .slide.slide-one .logo-s .sw {
@@ -567,6 +566,7 @@ body {
     width: 120px;
     height: 120px;
     left: 15px;
+    top: 5px;
   }
   .slides-container > .slide.slide-one .logo-s .sy,
   .slides-container > .slide.slide-one .logo-s .sw {
