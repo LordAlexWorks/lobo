@@ -1,4 +1,4 @@
-﻿/* COLORS */
+/* COLORS */
 /* MIXINS */
 .border-box {
   -moz-box-sizing: border-box;
@@ -264,7 +264,7 @@ body {
   position: fixed;
   top: 5px;
   left: 15px;
-  z-index: 1000;
+  z-index: 100;
 }
 .slides-container > .slide.slide-one .logo-s .sy,
 .slides-container > .slide.slide-one .logo-s .sw {
