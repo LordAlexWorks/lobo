@@ -141,27 +141,27 @@
         "projects": [
             {
                 "logo": "imgs/fruits/fruit-2.png",
-                "title": "Papaye - Sign documents online.",
+                "title": "Papaye",
                 "url": "#",
-                "tag": "Tag"
+                "tag": "Sign documents online."
             },
             {
                 "logo": "imgs/fruits/fruit-3.png",
-                "title": "Pitaya - Track Tasks ",
+                "title": "Pitaya",
                 "url": "#",
-                "tag": "Tag"
+                "tag": "Track Tasks"
             },
             {
                 "logo": "imgs/fruits/fruit-4.png",
-                "title": "Guayaba - Proximy commerce and loyalty platform",
+                "title": "Guayaba",
                 "url": "#",
-                "tag": "Tag"
+                "tag": "Proximy commerce and loyalty platform"
             },
             {
                 "logo": "imgs/fruits/fruit-5.png",
-                "title": "Jobo - Get Online payments",
+                "title": "Jobo",
                 "url": "#",
-                "tag": "Tag"
+                "tag": "Online payments"
             }
         ]
     }
