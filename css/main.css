@@ -936,7 +936,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  max-width: 720px;
+  max-width: 1024px;
   background: #ffc800;
   z-index: 120;
   top: 0;
