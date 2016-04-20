@@ -1268,6 +1268,19 @@ body {
   stroke: #fddf70;
   stroke-width: 1px;
 }
+.slides-container > .slide.slide-three .projects-container .projects {
+  padding: 32px 12px 0;
+}
+@media (min-width: 320px) {
+  .slides-container > .slide.slide-three .projects-container .projects {
+    padding: 60px 48px 0;
+  }
+}
+@media (min-width: 768px) {
+  .slides-container > .slide.slide-three .projects-container .projects {
+    padding: 0;
+  }
+}
 @media (min-width: 1250px) {
   .slides-container > .slide.slide-three .projects-container .projects {
     width: 1110px;
@@ -1311,13 +1324,23 @@ body {
   -o-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-size: 72px;
+  font-size: 28px;
   text-align: center;
   color: white;
   -moz-transition: left 0.2s ease;
   -o-transition: left 0.2s ease;
   -webkit-transition: left 0.2s ease;
   transition: left 0.2s ease;
+}
+@media (min-width: 720px) {
+  .slides-container > .slide.slide-three .projects-container .project .link {
+    font-size: 36px;
+  }
+}
+@media (min-width: 1250px) {
+  .slides-container > .slide.slide-three .projects-container .project .link {
+    font-size: 72px;
+  }
 }
 .slides-container > .slide.slide-three .projects-container .project:hover .info {
   right: 120%;
@@ -1429,7 +1452,7 @@ body {
   text-align: center;
   padding: 0 15px;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .slides-container > .slide.slide-three .clients-container .clients .col {
     display: inline-block;
     width: 50%;

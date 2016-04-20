@@ -1199,6 +1199,16 @@ html, body {
                 }
 
                 .projects {
+                    padding: 32px 12px 0;
+
+                    @media(min-width: 320px) {
+                        padding: 60px 48px 0;
+                    }
+
+                    @media(min-width: 768px) {
+                        padding: 0;
+                    }
+
                     @media(min-width: 1250px) {
                         width: 1110px;
                         height: 500px;
@@ -1238,11 +1248,19 @@ html, body {
                         left: 150%;
                         .transform(translate(-50%, -50%));
 
-                        font-size: 72px;
+                        font-size: 28px;
                         text-align: center;
                         color: white;
 
                         .transition(left 0.2s ease);
+
+                        @media(min-width: 720px) {
+                            font-size: 36px;
+                        }
+
+                        @media(min-width: 1250px) {
+                            font-size: 72px;
+                        }
                     }
 
                     &:hover {
@@ -1354,7 +1372,7 @@ html, body {
                         text-align: center;                       
                         padding: 0 15px;
 
-                        @media(min-width: 720px) {
+                        @media(min-width: 768px) {
                             display: inline-block;
                             width: 50%;
                             vertical-align: top;  
