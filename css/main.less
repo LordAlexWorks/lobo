@@ -1202,7 +1202,7 @@ html, body {
                 }
 
                 .projects {
-                    padding: 32px 12px 0;
+                    padding: 40px 12px 0;
 
                     @media(min-width: 320px) {
                         padding: 60px 48px 0;
@@ -1220,8 +1220,8 @@ html, body {
 
                 .project {
                     width: 100%;
-                    margin: 0 auto 24px;
-                    padding-bottom: 24px;
+                    margin: 0 auto 12px;
+                    padding-bottom: 12px;
                     overflow: hidden;    
                     
                     opacity: 0;
@@ -1232,6 +1232,16 @@ html, body {
                     cursor: pointer;
 
                     border-bottom: 1px solid @divider;
+
+                    @media(min-width: 480px) {
+                        margin: 0 auto 16px;
+                        padding-bottom: 16px;
+                    }
+
+                    @media(min-width: 720px){
+                        margin: 0 auto 24px;
+                        padding-bottom: 24px;
+                    }
 
                     @media(min-width: 1250px) {
                         border-bottom: none;
@@ -1301,15 +1311,17 @@ html, body {
 
                     .title {
                         color: @primary-one;
-                        font-size: 20px;
+                        font-size: 11px;
                         font-weight: 700;
 
                         @media(min-width: 480px) {
                             margin-bottom: 16px;
+                            font-size: 14px;
                         }
 
                         @media(min-width: 720px){
                             margin-bottom: 32px;
+                            font-size: 18px;
                             font-size: 24px;
                         }
 
@@ -1364,8 +1376,11 @@ html, body {
             }
 
             .clients-container {
-                padding: 20px;
                 width: 100%;
+
+                @media(min-width: 720px) {
+                    padding: 20px;
+                }
 
                 @media(min-width: 1250px) { 
                     padding: 80px;                   
@@ -1398,16 +1413,55 @@ html, body {
                         }
 
                         .group {
-                            margin-bottom: 50px;
+                            margin-bottom: 15px;
+
+                            @media(min-width: 480px) {
+                                margin-bottom: 15px;
+                            }
+
+                            @media(min-width: 720px){
+                                margin-bottom: 30px;
+                            }
+
+                            @media(min-width: 1250px) {
+                                margin-bottom: 50px;
+                            }
 
                             .title {
-                                font-size: 26px;
+                                font-size: 14px;
                                 color: @primary-one;
-                                margin-bottom: 20px;
+                                margin-bottom: 8px;
+
+                                @media(min-width: 480px) {
+                                    font-size: 16px;
+                                }
+
+                                @media(min-width: 720px){
+                                    font-size: 20px;
+                                    margin-bottom: 15px;
+                                }
+
+                                @media(min-width: 1250px) {
+                                    font-size: 26px;
+                                    margin-bottom: 20px;
+                                }
                             }
 
                             .item {
                                 margin-bottom: 5px;
+                                font-size: 11px;
+
+                                @media(min-width: 480px) {
+                                    font-size: 12px;
+                                }
+
+                                @media(min-width: 720px){
+                                    font-size: 14px
+                                }
+
+                                @media(min-width: 1250px) {
+                                    font-size: 16px;
+                                }
 
                                 > a {                                    
                                     color: @text-accent;
