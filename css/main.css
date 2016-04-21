@@ -1,4 +1,4 @@
-﻿/* COLORS */
+/* COLORS */
 /* MIXINS */
 .border-box {
   -moz-box-sizing: border-box;
@@ -1392,7 +1392,7 @@ body {
   font-size: 11px;
   font-weight: 700;
 }
-@media (min-width: 480px) {
+@media (min-width: 360px) {
   .slides-container > .slide.slide-three .projects-container .project .title {
     margin-bottom: 16px;
     font-size: 14px;
@@ -1402,7 +1402,6 @@ body {
   .slides-container > .slide.slide-three .projects-container .project .title {
     margin-bottom: 32px;
     font-size: 18px;
-    font-size: 24px;
   }
 }
 @media (min-width: 1250px) {
@@ -1418,7 +1417,7 @@ body {
   text-align: justify;
   display: none;
 }
-@media (min-width: 480px) {
+@media (min-width: 360px) {
   .slides-container > .slide.slide-three .projects-container .project .desc {
     display: block;
   }
