@@ -15,8 +15,8 @@ $(function () {
     });
 
     loOpen.on('click', function () {
-        boDesc.removeClass('open');
-        loDesc.addClass('open');
+       // boDesc.removeClass('open');
+       // loDesc.addClass('open');
     });
 
     boClose.on('click', function () {
@@ -24,7 +24,7 @@ $(function () {
     });
 
     loClose.on('click', function () {
-        loDesc.removeClass('open');
+        //loDesc.removeClass('open');
     });
 
     var cats = [boCat, loCat, $('.bo .text'), $('.lo .text')];
